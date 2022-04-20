@@ -375,11 +375,12 @@ a {
   top: -26px;
   display: none;
 }
-.radial-progressbar {
+.progressbar.radial-progressbar {
   height: 150px; /*@circle-size */
   width: 150px; /*@circle-size */
   margin: 15px auto;
   border-radius: 50%;
+  border: none;
 }
 
 .circle .mask,
@@ -460,6 +461,36 @@ a {
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
+/* shoe progressbar */
+.progressbar.shoe {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  height: 200px;
+  background-image: url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeStroke.png");
+  background-repeat: no-repeat;
+  background-size: auto 200px;
+  background-position: 10px;
+}
+
+.progressbar.shoe .progress,
+.progressbar.shoe .progress.updated {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeImg2.png");
+  background-repeat: no-repeat;
+  background-size: auto 200px;
+  background-position: 10px;
+}
+
+.progressbar.shoe .progress.updated {
+  animation: none;
+}
+
+.progressbar.shoe .progress .runner,
+.progressbar.shoe .progress .runner.paused {
+  background-image: none;
+}
+
+
 #MainPart_lbManualUpdateWarning {
   margin: 15px 0;
 }

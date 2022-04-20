@@ -27,7 +27,7 @@ queueViewModel.pageReady(function (data) {
         </div>`).insertAfter(`.diagonal`);
     // radial progressbar
     $(
-      '<div class="radial-progressbar"> ' +
+      '<div class="progressbar queueElement radial-progressbar "> ' +
         '<div class="radial-progressbar-background">' +
         "</div>" +
         '<div class="circle">' +
@@ -57,6 +57,12 @@ queueViewModel.pageReady(function (data) {
     // End radial progressbar
 
     // shoe progressbar
+    $(`<div class="progressbar queueElement shoe" data-bind="visible: layout.progressVisible">
+          <div class="progress updated" style="width: 75%">
+            <div  class="runner" data-bind="css: { paused: layout.queueIsPausedVisible }"></div>
+          </div>
+          <div class="clear"></div>
+        </div>`).insertAfter(`.radial-progressbar`);
 
     //progres bar drowpdown
   }
