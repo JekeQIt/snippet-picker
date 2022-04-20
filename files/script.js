@@ -57,6 +57,8 @@ queueViewModel.pageReady(function (data) {
     // End radial progressbar
 
     // shoe progressbar
+
+    //progres bar drowpdown
   }
 
   if (pageid == "after") {
