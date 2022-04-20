@@ -490,7 +490,66 @@ a {
   background-image: none;
 }
 
+/* bracket progressbar */
+@-webkit-keyframes bracket {
+  from {
+    background-position: 0px bottom, 0px top, 0, 0;
+  }
 
+  to {
+    background-position: 50px bottom, 50px top, 0, 0;
+  }
+}
+
+@-moz-keyframes bracket {
+  from {
+    background-position: 0px bottom, 0px top, 0, 0;
+  }
+
+  to {
+    background-position: 50px bottom, 50px top, 0, 0;
+  }
+}
+
+@keyframes bracket {
+  from {
+    background-position: 0px bottom, 0px top, 0, 0;
+  }
+
+  to {
+    background-position: 50px bottom, 50px top, 0, 0;
+  }
+}
+
+/* progressbar ppp  */
+.progressbar.bracket {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4.4px;
+}
+
+.progressbar.bracket .progress,
+.progressbar.bracket .progress.updated {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(126deg, rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px),
+    linear-gradient(55deg, rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px), linear-gradient(90deg, var(--green), var(--green-light-bold), var(--green-light-light), var(--green-light-medium));
+  background-size: 50px 50%, 50px 50%, cover, 100% 100%;
+  background-position: 50px bottom, 50px top, 0, 0;
+  background-repeat: repeat-x, repeat-x, no-repeat, no-repeat;
+  border-radius: 3px;
+}
+
+.progressbar.bracket .progress.updated {
+  -webkit-animation: bracket 1s linear infinite !important;
+  -moz-animation: bracket 1s linear infinite !important;
+  animation: bracket 1s linear infinite !important;
+}
+
+.progressbar.bracket .progress .runner,
+.progressbar.bracket .progress .runner.paused {
+  background-repeat: repeat-x, repeat-x, no-repeat;
+  display: none;
+}
 #MainPart_lbManualUpdateWarning {
   margin: 15px 0;
 }

@@ -64,6 +64,14 @@ queueViewModel.pageReady(function (data) {
           <div class="clear"></div>
         </div>`).insertAfter(`.radial-progressbar`);
 
+    //bracket progressbar
+    $(`<div class="progressbar queueElement bracket" data-bind="visible: layout.progressVisible">
+          <div class="progress updated" style="width: 75%">
+            <div  class="runner" data-bind="css: { paused: layout.queueIsPausedVisible }"></div>
+          </div>
+          <div class="clear"></div>
+        </div>`).insertAfter(`.burst`);
+
     //progres bar drowpdown
   }
 
