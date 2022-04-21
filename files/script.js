@@ -27,7 +27,7 @@ queueViewModel.pageReady(function (data) {
         </div>`).insertAfter(`.diagonal`);
     // radial progressbar
     $(
-      '<div class="progressbar queueElement radial-progressbar "> ' +
+      '<div class="progressbar queueElement radial-progressbar"> ' +
         '<div class="radial-progressbar-background">' +
         "</div>" +
         '<div class="circle">' +
@@ -63,16 +63,29 @@ queueViewModel.pageReady(function (data) {
           </div>
           <div class="clear"></div>
         </div>`).insertAfter(`.radial-progressbar`);
+        
+    //progress bar drowpdown
+    $('<div class="center-div">' +
+      '<label for="progressbar-dropdown"> Progress Bars: </label>' + 
+      '<select name="progressbar-dropdown" id="progressbarDropdown">' +
+        '<option value="all">All</option>' +
+      '</select>' +
+      '</div>').insertAfter("#divConfirmRedirectModal");
 
-    //bracket progressbar
-    $(`<div class="progressbar queueElement bracket" data-bind="visible: layout.progressVisible">
-          <div class="progress updated" style="width: 75%">
-            <div  class="runner" data-bind="css: { paused: layout.queueIsPausedVisible }"></div>
-          </div>
-          <div class="clear"></div>
-        </div>`).insertAfter(`.burst`);
+    var progressBars = $(".progressbar");
+    for (let i = 0; i < progressBars.length; i++) {
+      progressBarName = progressBars[i].classList[2]; 
+      /* grabbing the 3rd class name and making it the option text */
+      if(progressBarName === undefined) {
+        progressBarName = 'standard';
+      }
+      $(`<option value="${progressBarName}">${progressBarName[0].toUpperCase() + 
+        progressBarName.substring(1)}</option>`).appendTo("#progressbarDropdown");
+    }
+    
+    // options functionality - hide other dropdowns if one is selected 
 
-    //progres bar drowpdown
+
   }
 
   if (pageid == "after") {

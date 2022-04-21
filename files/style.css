@@ -383,6 +383,10 @@ a {
   border: none;
 }
 
+.center-div {
+  text-align: center;
+}
+
 .circle .mask,
 .circle .fill,
 .circle .shadow {
