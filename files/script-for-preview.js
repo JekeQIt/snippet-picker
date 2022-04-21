@@ -5,14 +5,14 @@ $(document).ready(function () {
 
     if (pageid == "queue") {
       $("#reminderStatusMesage").after(
-        '<label class="cblabel queueElement">' +
+        '<label class="cblabel queueElement width-slider">' +
           '<input type="range" value="75" id="progressWidthInput" max="100" min="0">' +
           '<span class="title">&nbsp Width of progress bar</span>' +
           '<span class="qmark">?' +
           '<span class="tooltip">Change the width of the progress bar</span>' +
           "</span>" +
           "</label>" +
-          `<label class="cblabel queueElement">
+          `<label class="cblabel queueElement checkbox">
           <input class="update-state" type="checkbox" >
           Progessbar updating state
           <span class="qmark">?
