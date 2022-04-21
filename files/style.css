@@ -149,7 +149,41 @@ a {
   font-weight: 400;
   position: relative;
 }
+@keyframes select_ripple {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
 
+  99% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
+  100%{
+    box-shadow: none
+  }
+}
+.progressbar-dropdown-container{
+
+}
+.progressbar-dropdown-container  select{
+  height: 15px;
+  width: 10px;
+  font-size: 10px;
+  transition: .5s all;
+  background-color: var(--gray-lightest);
+  animation: select_ripple .8s linear 3;
+  border:none;
+  box-shadow: 0 0 6px 1px rgb(0 0 0 / 28%);
+}
+.progressbar-dropdown-container:hover select,
+.progressbar-dropdown-container select:active,
+.progressbar-dropdown-container select:focus-visible  {
+height: 25px;
+font-size: 16px;
+width: 100%;
+transition: .3s all;
+background-color: #fff;
+}
+.progressbar-dropdown-container select:focus-visible {outline: none;}
 /* progressbar ppp  */
 
 @-webkit-keyframes gradient_bkgd {
@@ -383,9 +417,6 @@ a {
   border: none;
 }
 
-.center-div {
-  text-align: center;
-}
 
 .circle .mask,
 .circle .fill,

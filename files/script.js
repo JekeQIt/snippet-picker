@@ -70,13 +70,16 @@ queueViewModel.pageReady(function (data) {
           </div>
           <div class="clear"></div>
         </div>`).insertAfter(`.burst`);
-    //progress bar drowpdown - dynamically add options
-    $('<div class="center-div">' +
+    //progress bar drowpdown
+    $(
+      '<div class="progressbar-dropdown-container">' +
+        '<label for="progressbar-dropdown"> </label>' +
         '<select name="progressbar-dropdown" id="progressbarDropdown">' +
-          '<option value="" disabled selected>Select Progress Bar</option>' +
-          '<option value="all">All</option>' +
-        '</select>' +
-      '</div>').insertAfter("#divConfirmRedirectModal");
+        '<option value="" disabled selected>Select Progress Bar</option>' +
+        '<option value="all">All</option>' +
+        "</select>" +
+        "</div>"
+    ).insertAfter("#divConfirmRedirectModal");
 
     var progressBarDiv = $(".progressbar");
     for (let i = 0; i < progressBarDiv.length; i++) {
@@ -87,25 +90,22 @@ queueViewModel.pageReady(function (data) {
 
     // progress bar display loop
     // display STANDARD to begin with, add display none style to all divs but standard
-    // 
+    //
     for (let i = 1; i < progressBarDiv.length; i++) {
       progressBarDiv[i].style.display = "none";
     }
 
-
     // options functionality - hide other dropdowns if one is selected
-    // when option is selected display the progress bar that is selected 
-    // if this.value = 'specified progress bar' remove display: none style to that element 
-    
-    $('select').on('change', function() {
-      $(`.progressbar`).css("display", "")
-      if(this.value === 'all') {
-        for (let i = 0; i < progressBarDiv.length; i++) {
-          progressBarDiv[i].style.display = "";
-        }
+    // when option is selected display the progress bar that is selected
+    // if this.value = 'specified progress bar' remove display: none style to that element
+
+    $("select").on("change", function () {
+      $(`.progressbar`).hide();
+      if (this.value === "all") {
+        $(`.progressbar`).show();
       } else {
         // Select all elements except those with class="selected value":
-        $(`.progressbar:not(.${this.value})`).css("display", "none");
+        $(`.progressbar.${this.value}`).show();
       }
     });
   }
