@@ -27,7 +27,7 @@ queueViewModel.pageReady(function (data) {
         </div>`).insertAfter(`.diagonal`);
     // radial progressbar
     $(
-      '<div class="radial-progressbar"> ' +
+      '<div class="progressbar queueElement radial-progressbar"> ' +
         '<div class="radial-progressbar-background">' +
         "</div>" +
         '<div class="circle">' +
@@ -57,6 +57,57 @@ queueViewModel.pageReady(function (data) {
     // End radial progressbar
 
     // shoe progressbar
+    $(`<div class="progressbar queueElement shoe" data-bind="visible: layout.progressVisible">
+          <div class="progress updated" style="width: 75%">
+            <div  class="runner" data-bind="css: { paused: layout.queueIsPausedVisible }"></div>
+          </div>
+          <div class="clear"></div>
+        </div>`).insertAfter(`.radial-progressbar`);
+    //bracket progressbar
+    $(`<div class="progressbar queueElement bracket" data-bind="visible: layout.progressVisible">
+          <div class="progress updated" style="width: 75%">
+            <div  class="runner" data-bind="css: { paused: layout.queueIsPausedVisible }"></div>
+          </div>
+          <div class="clear"></div>
+        </div>`).insertAfter(`.burst`);
+    //progress bar drowpdown
+    $(
+      '<div class="progressbar-dropdown-container">' +
+        '<label for="progressbar-dropdown"> </label>' +
+        '<select name="progressbar-dropdown" id="progressbarDropdown">' +
+        '<option value="" disabled selected>Select Progress Bar</option>' +
+        '<option value="all">All</option>' +
+        "</select>" +
+        "</div>"
+    ).insertAfter("#divConfirmRedirectModal");
+
+    var progressBarDiv = $(".progressbar");
+    for (let i = 0; i < progressBarDiv.length; i++) {
+      progressBarName = progressBarDiv[i].classList[2];
+      /* grabbing the 3rd class name and making it the option text */
+      $(`<option value="${progressBarName}">${progressBarName[0].toUpperCase() + progressBarName.substring(1)}</option>`).appendTo("#progressbarDropdown");
+    }
+
+    // progress bar display loop
+    // display STANDARD to begin with, add display none style to all divs but standard
+    //
+    for (let i = 1; i < progressBarDiv.length; i++) {
+      progressBarDiv[i].style.display = "none";
+    }
+
+    // options functionality - hide other dropdowns if one is selected
+    // when option is selected display the progress bar that is selected
+    // if this.value = 'specified progress bar' remove display: none style to that element
+
+    $("select").on("change", function () {
+      $(`.progressbar`).hide();
+      if (this.value === "all") {
+        $(`.progressbar`).show();
+      } else {
+        // Select all elements except those with class="selected value":
+        $(`.progressbar.${this.value}`).show();
+      }
+    });
   }
 
   if (pageid == "after") {

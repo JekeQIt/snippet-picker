@@ -149,7 +149,41 @@ a {
   font-weight: 400;
   position: relative;
 }
+@keyframes select_ripple {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
 
+  99% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
+  100%{
+    box-shadow: none
+  }
+}
+.progressbar-dropdown-container{
+
+}
+.progressbar-dropdown-container  select{
+  height: 15px;
+  width: 10px;
+  font-size: 10px;
+  transition: .5s all;
+  background-color: var(--gray-lightest);
+  animation: select_ripple .8s linear 3;
+  border:none;
+  box-shadow: 0 0 6px 1px rgb(0 0 0 / 28%);
+}
+.progressbar-dropdown-container:hover select,
+.progressbar-dropdown-container select:active,
+.progressbar-dropdown-container select:focus-visible  {
+height: 25px;
+font-size: 16px;
+width: 100%;
+transition: .3s all;
+background-color: #fff;
+}
+.progressbar-dropdown-container select:focus-visible {outline: none;}
 /* progressbar ppp  */
 
 @-webkit-keyframes gradient_bkgd {
@@ -375,12 +409,14 @@ a {
   top: -26px;
   display: none;
 }
-.radial-progressbar {
+.progressbar.radial-progressbar {
   height: 150px; /*@circle-size */
   width: 150px; /*@circle-size */
   margin: 15px auto;
   border-radius: 50%;
+  border: none;
 }
+
 
 .circle .mask,
 .circle .fill,
@@ -459,6 +495,95 @@ a {
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
+}
+/* shoe progressbar */
+.progressbar.shoe {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  height: 200px;
+  background-image: url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeStroke.png");
+  background-repeat: no-repeat;
+  background-size: auto 200px;
+  background-position: 10px;
+}
+
+.progressbar.shoe .progress,
+.progressbar.shoe .progress.updated {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeImg2.png");
+  background-repeat: no-repeat;
+  background-size: auto 200px;
+  background-position: 10px;
+}
+
+.progressbar.shoe .progress.updated {
+  animation: none;
+}
+
+.progressbar.shoe .progress .runner,
+.progressbar.shoe .progress .runner.paused {
+  background-image: none;
+}
+
+/* bracket progressbar */
+@-webkit-keyframes bracket {
+  from {
+    background-position: 0px bottom, 0px top, 0, 0;
+  }
+
+  to {
+    background-position: 50px bottom, 50px top, 0, 0;
+  }
+}
+
+@-moz-keyframes bracket {
+  from {
+    background-position: 0px bottom, 0px top, 0, 0;
+  }
+
+  to {
+    background-position: 50px bottom, 50px top, 0, 0;
+  }
+}
+
+@keyframes bracket {
+  from {
+    background-position: 0px bottom, 0px top, 0, 0;
+  }
+
+  to {
+    background-position: 50px bottom, 50px top, 0, 0;
+  }
+}
+
+/* progressbar ppp  */
+.progressbar.bracket {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4.4px;
+}
+
+.progressbar.bracket .progress,
+.progressbar.bracket .progress.updated {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(126deg, rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px),
+    linear-gradient(55deg, rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px), linear-gradient(90deg, var(--green), var(--green-light-bold), var(--green-light-light), var(--green-light-medium));
+  background-size: 50px 50%, 50px 50%, cover, 100% 100%;
+  background-position: 50px bottom, 50px top, 0, 0;
+  background-repeat: repeat-x, repeat-x, no-repeat, no-repeat;
+  border-radius: 3px;
+}
+
+.progressbar.bracket .progress.updated {
+  -webkit-animation: bracket 1s linear infinite !important;
+  -moz-animation: bracket 1s linear infinite !important;
+  animation: bracket 1s linear infinite !important;
+}
+
+.progressbar.bracket .progress .runner,
+.progressbar.bracket .progress .runner.paused {
+  background-repeat: repeat-x, repeat-x, no-repeat;
+  display: none;
 }
 #MainPart_lbManualUpdateWarning {
   margin: 15px 0;
