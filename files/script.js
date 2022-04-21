@@ -63,29 +63,34 @@ queueViewModel.pageReady(function (data) {
           </div>
           <div class="clear"></div>
         </div>`).insertAfter(`.radial-progressbar`);
-        
+    //bracket progressbar
+    $(`<div class="progressbar queueElement bracket" data-bind="visible: layout.progressVisible">
+          <div class="progress updated" style="width: 75%">
+            <div  class="runner" data-bind="css: { paused: layout.queueIsPausedVisible }"></div>
+          </div>
+          <div class="clear"></div>
+        </div>`).insertAfter(`.burst`);
     //progress bar drowpdown
-    $('<div class="center-div">' +
-      '<label for="progressbar-dropdown"> Progress Bars: </label>' + 
-      '<select name="progressbar-dropdown" id="progressbarDropdown">' +
+    $(
+      '<div class="center-div">' +
+        '<label for="progressbar-dropdown"> Progress Bars: </label>' +
+        '<select name="progressbar-dropdown" id="progressbarDropdown">' +
         '<option value="all">All</option>' +
-      '</select>' +
-      '</div>').insertAfter("#divConfirmRedirectModal");
+        "</select>" +
+        "</div>"
+    ).insertAfter("#divConfirmRedirectModal");
 
     var progressBars = $(".progressbar");
     for (let i = 0; i < progressBars.length; i++) {
-      progressBarName = progressBars[i].classList[2]; 
+      progressBarName = progressBars[i].classList[2];
       /* grabbing the 3rd class name and making it the option text */
-      if(progressBarName === undefined) {
-        progressBarName = 'standard';
+      if (progressBarName === undefined) {
+        progressBarName = "standard";
       }
-      $(`<option value="${progressBarName}">${progressBarName[0].toUpperCase() + 
-        progressBarName.substring(1)}</option>`).appendTo("#progressbarDropdown");
+      $(`<option value="${progressBarName}">${progressBarName[0].toUpperCase() + progressBarName.substring(1)}</option>`).appendTo("#progressbarDropdown");
     }
-    
-    // options functionality - hide other dropdowns if one is selected 
 
-
+    // options functionality - hide other dropdowns if one is selected
   }
 
   if (pageid == "after") {
