@@ -161,34 +161,81 @@ a {
     box-shadow: none
   }
 }
-.progressbar-options-container {
+.progressbar-options-container {position: relative;}
+.plus-minus{
+  position: absolute;
+  right:10px;
+  height:12px;
+  width:16px;
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 3px;
+  line-height: 1;
+  cursor: pointer;
+}
+.plus-minus:hover{
+    background-color: #eee;
+}
+.plus-minus span{
+  position: absolute;
+  transition: 300ms;
+  background: #000;
+  border-radius: 2px;
+}
+.plus-minus span:first-child {
+  top: 2.5px;
+  bottom: 2px;
+  width: 2px;
+  left: 45%;
+}
+
+.plus-minus span:last-child {
+  left: 3px;
+  right: 3px;
+  height: 2px;
+  top: 45%;
+}
+/* Morph the shape when the button is hovered over */
+.plus-minus:hover span {
+  transform: rotate(90deg);
+}
+
+.plus-minus:hover span:last-child {
+  left: 50%;
+  right: 50%;
+}
+/* .plus-minus:hover{
+  background-color: #eee;
+} */
+.progressbar-options {
   padding: 15px 10px;
   max-width: 514px;
   background-color: #fff;
   border-radius: 6px;
   box-shadow: 1px 1px 12px rgb(0 0 0 / 50%);
+    animation: select_ripple .8s linear 3;
 }
 .progressbar-dropdown-container{
 
 }
 .progressbar-dropdown-container  select{
-  height: 15px;
-  width: 10px;
-  font-size: 10px;
+  height: 25px;
+  font-size: 16px;
   transition: .5s all;
   background-color: var(--gray-lightest);
-  animation: select_ripple .8s linear 3;
   border:none;
   box-shadow: 0 0 6px 1px rgb(0 0 0 / 28%);
+  margin: 0 0 5px;
 }
 .progressbar-dropdown-container:hover select,
 .progressbar-dropdown-container select:active,
 .progressbar-dropdown-container select:focus-visible  {
-height: 25px;
+/* height: 25px;
 font-size: 16px;
 width: 100%;
 transition: .3s all;
-background-color: #fff;
+background-color: #fff; */
 }
 .progressbar-dropdown-container select:focus-visible {outline: none;}
 /* progressbar ppp  */

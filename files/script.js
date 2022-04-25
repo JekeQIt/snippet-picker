@@ -71,22 +71,6 @@ queueViewModel.pageReady(function (data) {
           <div class="clear"></div>
         </div>`).insertAfter(`.burst`);
 
-    //progress bar options cointainer
-    $('<div class="progressbar-dropdown-container">' +
-          '<label for="progressbar-dropdown"> </label>' +
-          '<select name="progressbar-dropdown" id="progressbarDropdown">' +
-          '<option value="" disabled selected>Select Progress Bar</option>' +
-          '<option value="all">All</option>' +
-          '</select>' +
-      '</div>'
-    ).insertBefore(".warning-box");
-    // display slider and update option in container
-    $('<div class="progressbar-options-container">' +
-      '</div>'
-      ).insertBefore(".warning-box");
-    
-    $(".progressbar-dropdown-container").appendTo(".progressbar-options-container");
-
     // progress bar display loop
     // display STANDARD to begin with, add display none style to all divs but standard
     var progressBarDiv = $(".progressbar");
@@ -103,7 +87,9 @@ queueViewModel.pageReady(function (data) {
     // options functionality - hide other dropdowns if one is selected
     // when option is selected display the progress bar that is selected
     // if this.value = 'specified progress bar' remove display: none style to that element
-
+    $(".plus-minus").click(function () {
+      console.log("click");
+    });
     $("select").on("change", function () {
       $(`.progressbar`).hide();
       if (this.value === "all") {
@@ -136,8 +122,8 @@ queueViewModel.pageReady(function (data) {
 //});
 
 //comes after pageReady
-$(document).ready(function(){
+$(document).ready(function () {
   // $('#MainPart_ulProgressbarBox_Holder_Processbar').removeAttr('style')
-  $(".width-slider").appendTo(".progressbar-options-container");
-  $(".checkbox").appendTo(".progressbar-options-container");
-})
+  $(".width-slider").appendTo(".progressbar-options");
+  $(".checkbox").appendTo(".progressbar-options");
+});
