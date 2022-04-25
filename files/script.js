@@ -88,7 +88,13 @@ queueViewModel.pageReady(function (data) {
     // when option is selected display the progress bar that is selected
     // if this.value = 'specified progress bar' remove display: none style to that element
     $(".plus-minus").click(function () {
-      console.log("click");
+      if ($(".progressbar-options").css("display") === "block") {
+        $(".progressbar-options").hide();
+        $(".plus-minus").addClass("closed");
+      } else {
+        $(".progressbar-options").show();
+        $(".plus-minus").removeClass("closed");
+      }
     });
     $("select").on("change", function () {
       $(`.progressbar`).hide();
