@@ -87,13 +87,14 @@ queueViewModel.pageReady(function (data) {
     // options functionality - hide other dropdowns if one is selected
     // when option is selected display the progress bar that is selected
     // if this.value = 'specified progress bar' remove display: none style to that element
+
     $(".plus-minus").click(function () {
       if ($(".progressbar-options").css("display") === "block") {
-        $(".progressbar-options").hide();
-        $(".plus-minus").addClass("closed");
+        $(".progressbar-options").hide(300);
+        $(".plus-minus").removeClass("minus");
       } else {
-        $(".progressbar-options").show();
-        $(".plus-minus").removeClass("closed");
+        $(".plus-minus").addClass("minus");
+        $(".progressbar-options").show(300);
       }
     });
     $("select").on("change", function () {

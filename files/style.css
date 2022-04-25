@@ -163,15 +163,16 @@ a {
 }
 .progressbar-options-container {
   position: relative;
+  min-height: 12px;
+  transition: all linear 0.3s;
 }
 .progessbar-options {
-  transition: all linear 0.3s;
 }
 .plus-minus {
   position: absolute;
-  right: 10px;
+  left: 0;
+  top: 0;
   height: 12px;
-  top: 8px;
   width: 16px;
   border: 1px solid #000;
   text-align: center;
@@ -180,6 +181,8 @@ a {
   line-height: 1;
   cursor: pointer;
   transition: all linear 0.3s;
+  animation: select_ripple 0.8s linear 3;
+  border-radius: 3px;
 }
 .plus-minus:hover {
   background-color: #eee;
@@ -204,17 +207,18 @@ a {
   top: 45%;
 }
 /* Morph the shape when the button is hovered over */
-.plus-minus:hover span {
+.plus-minus.minus span {
   transform: rotate(90deg);
 }
 
-.plus-minus:hover span:last-child {
+.plus-minus.minus span:last-child {
   left: 50%;
   right: 50%;
 }
-.plus-minus.closed {
-  top: 0;
-  left: 0;
+.plus-minus.minus {
+  top: 8px;
+  left: calc(100% - 40px);
+  transition: all linear 0.3s;
 }
 /* .plus-minus:hover{
   background-color: #eee;
@@ -225,7 +229,6 @@ a {
   background-color: #fff;
   border-radius: 6px;
   box-shadow: 1px 1px 12px rgb(0 0 0 / 50%);
-  animation: select_ripple 0.8s linear 3;
 }
 .progressbar-dropdown-container {
 }
