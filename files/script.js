@@ -53,7 +53,9 @@ queueViewModel.pageReady(function (data) {
     $(".circle .mask.full, .circle .fill").css({
       transform: "rotate(" + (radialPercent * 3.6) / 2 + "deg)",
     });
-    $(".circle .fill.fix").css({ transform: "rotate(" + radialPercent * 3.6 + "deg)" });
+    $(".circle .fill.fix").css({
+      transform: "rotate(" + radialPercent * 3.6 + "deg)",
+    });
     // End radial progressbar
 
     // shoe progressbar
@@ -77,12 +79,25 @@ queueViewModel.pageReady(function (data) {
     for (let i = 0; i < progressBarDiv.length; i++) {
       progressBarName = progressBarDiv[i].classList[2];
       /* grabbing the 3rd class name and making it the option text */
-      $(`<option value="${progressBarName}">${progressBarName[0].toUpperCase() + progressBarName.substring(1)}</option>`).appendTo("#progressbarDropdown");
+      $(
+        `<option value="${progressBarName}">${
+          progressBarName[0].toUpperCase() + progressBarName.substring(1)
+        }</option>`
+      ).appendTo("#progressbarDropdown");
     }
 
     for (let i = 1; i < progressBarDiv.length; i++) {
       progressBarDiv[i].style.display = "none";
     }
+
+    // adding button to display relevant code
+    $(
+      '<button type="button" class="relevant-btn">Relevant Code</button>'
+    ).appendTo(".progressbar-options");
+    $(".relevant-code").hide();
+    $(".relevant-btn").click(function () {
+      $(".relevant-code").toggle();
+    });
 
     // options functionality - hide other dropdowns if one is selected
     // when option is selected display the progress bar that is selected
@@ -103,6 +118,9 @@ queueViewModel.pageReady(function (data) {
       } else {
         // Select all elements except those with class="selected value":
         $(`.progressbar.${this.value}`).show();
+        console.log($(`.progressbar.${this.value}`));
+        var htmlCode = $(`.progressbar.${this.value}`).prop("outerHTML");
+        $("#relevant-html>code").text(htmlCode);
       }
     });
   }

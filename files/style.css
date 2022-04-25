@@ -102,6 +102,40 @@ body {
   /*dropdown*/
   padding-top: 4px;
 }
+/* Relevant Code */
+.relevant-code {
+  background-color: #19be81;
+  height: 310px;
+  width: 500px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 12px rgb(0 0 0 / 50%);
+  border: 2px solid #000;
+  position: fixed;
+  margin-left: 7px;
+  top: 50%;
+}
+.relevant-btn {
+  margin: 5px 0;
+}
+#relevant-html {
+  background: #fff;
+  width: 243px;
+  float: left;
+  margin-left: 3.5px;
+  margin-top: 3.5px;
+}
+#relevant-css {
+  background: #fff;
+  width: 243px;
+  float: right;
+  margin-right: 3.5px;
+  margin-top: 3.5px;
+}
+code {
+  font-family: Consolas, "courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+}
 /*you can close this page without losing your place in line*/
 #main-top-message {
   text-align: center;
@@ -286,7 +320,11 @@ background-color: #fff; */
 .progressbar .progress.updated {
   background-color: var(--green-light-bold);
   background-image: none;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 13px, #000 13px);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 13px,
+    #000 13px
+  );
   background-size: 15px;
   border-radius: 2px;
 }
@@ -445,11 +483,20 @@ background-color: #fff; */
   background-color: var(--green-light-bold);
   background-image: none;
   background-size: 200% 100%;
-  background-image: linear-gradient(90deg, var(--green-light-bold) 0%, var(--green-light-bold) 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--green-light-bold) 0%,
+    var(--green-light-bold) 100%
+  );
 }
 
 .progressbar.burst .progress.updated {
-  background-image: linear-gradient(90deg, var(--green-light-bold) 0%, rgba(255, 255, 255, 0.842) 20%, var(--green-light-bold) 22%);
+  background-image: linear-gradient(
+    90deg,
+    var(--green-light-bold) 0%,
+    rgba(255, 255, 255, 0.842) 20%,
+    var(--green-light-bold) 22%
+  );
   -webkit-animation: burst 2s ease-out 3 forwards;
   -moz-animation: burst 2s ease-out 3 forwards;
   animation: burst 2s ease-out 3 forwards;
@@ -503,10 +550,20 @@ background-color: #fff; */
   border-radius: 50%;
 }
 .circle .mask {
-  clip: rect(0px, 150px, 150px, 75px); /*clip: rect(0px, @circle-size, @circle-size, @circle-size/2); */
+  clip: rect(
+    0px,
+    150px,
+    150px,
+    75px
+  ); /*clip: rect(0px, @circle-size, @circle-size, @circle-size/2); */
 }
 .circle .mask .fill {
-  clip: rect(0px, 75px, 150px, 0px); /*clip: rect(0px, @circle-size/2, @circle-size, 0px);*/
+  clip: rect(
+    0px,
+    75px,
+    150px,
+    0px
+  ); /*clip: rect(0px, @circle-size/2, @circle-size, 0px);*/
   background-color: var(--green);
 }
 
@@ -631,9 +688,25 @@ background-color: #fff; */
 .progressbar.bracket .progress,
 .progressbar.bracket .progress.updated {
   background-color: rgba(0, 0, 0, 0);
-  background-image: linear-gradient(126deg, rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px),
-    linear-gradient(55deg, rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px),
-    linear-gradient(90deg, var(--green), var(--green-light-bold), var(--green-light-light), var(--green-light-medium));
+  background-image: linear-gradient(
+      126deg,
+      rgba(0, 0, 0, 0) 19px,
+      #000 20px,
+      rgba(0, 0, 0, 0) 21px
+    ),
+    linear-gradient(
+      55deg,
+      rgba(0, 0, 0, 0) 19px,
+      #000 20px,
+      rgba(0, 0, 0, 0) 21px
+    ),
+    linear-gradient(
+      90deg,
+      var(--green),
+      var(--green-light-bold),
+      var(--green-light-light),
+      var(--green-light-medium)
+    );
   background-size: 50px 50%, 50px 50%, cover, 100% 100%;
   background-position: 50px bottom, 50px top, 0, 0;
   background-repeat: repeat-x, repeat-x, no-repeat, no-repeat;
@@ -714,7 +787,11 @@ background-color: #fff; */
   margin: 3px;
 }
 .processbar span {
-  background-image: linear-gradient(to bottom, #fff 21px, var(--green-dark-middle) 21px);
+  background-image: linear-gradient(
+    to bottom,
+    #fff 21px,
+    var(--green-dark-middle) 21px
+  );
 }
 /*status last updated*/
 #MainPart_divProgressbarBox_Holder_LastUpdateTime {
