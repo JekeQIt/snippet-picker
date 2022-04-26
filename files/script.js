@@ -53,7 +53,9 @@ queueViewModel.pageReady(function (data) {
     $(".circle .mask.full, .circle .fill").css({
       transform: "rotate(" + (radialPercent * 3.6) / 2 + "deg)",
     });
-    $(".circle .fill.fix").css({ transform: "rotate(" + radialPercent * 3.6 + "deg)" });
+    $(".circle .fill.fix").css({
+      transform: "rotate(" + radialPercent * 3.6 + "deg)",
+    });
     // End radial progressbar
 
     // shoe progressbar
@@ -77,12 +79,23 @@ queueViewModel.pageReady(function (data) {
     for (let i = 0; i < progressBarDiv.length; i++) {
       progressBarName = progressBarDiv[i].classList[2];
       /* grabbing the 3rd class name and making it the option text */
-      $(`<option value="${progressBarName}">${progressBarName[0].toUpperCase() + progressBarName.substring(1)}</option>`).appendTo("#progressbarDropdown");
+      $(
+        `<option value="${progressBarName}">${
+          progressBarName[0].toUpperCase() + progressBarName.substring(1)
+        }</option>`
+      ).appendTo("#progressbarDropdown");
     }
 
     for (let i = 1; i < progressBarDiv.length; i++) {
       progressBarDiv[i].style.display = "none";
     }
+
+    // adding button to display relevant code
+    $(".relevant-code").hide();
+    $(".relevant-btn").click(function () {
+      $(".relevant-code").toggle();
+      $("div#relevant-css>code").hide();
+    });
 
     // options functionality - hide other dropdowns if one is selected
     // when option is selected display the progress bar that is selected
@@ -101,9 +114,22 @@ queueViewModel.pageReady(function (data) {
       $(`.progressbar`).hide();
       if (this.value === "all") {
         $(`.progressbar`).show();
+        $(".relevant-code").hide();
+      } else if (this.value === "radial-progressbar") {
+        $(`.progressbar.${this.value}`).show();
+        $("#relevant-html").show();
+        var htmlCode = $(`.progressbar.${this.value}`).prop("outerHTML");
+        $("#relevant-html>code").text(
+          `$("#MainPart_divProgressbar").hide();
+          $('${htmlCode}').appendTo(".warning-box");`
+        );
+        $(`code#${this.value}`).show();
       } else {
         // Select all elements except those with class="selected value":
         $(`.progressbar.${this.value}`).show();
+        $("#relevant-html").hide();
+        $("div#relevant-css>code").hide();
+        $(`code#${this.value}`).show();
       }
     });
   }

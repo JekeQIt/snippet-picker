@@ -3,19 +3,46 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <!-- <meta id="queue-it_log" data-userid="819cc795-0b90-4bb4-96a8-ff9321c5d81b" data-proxyurl="https://logging.queue-it.net/logging/event"> -->
     <title>Queue-it</title>
 
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="files/default_images/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="files/default_images/apple-touch-icon-152x152.png" />
-    <link rel="apple-touch-icon" href="files/default_images/queue-it_appletouch.png" />
-    <link rel="icon" type="image/png" href="files/default_images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="files/default_images/favicon-16x16.png" sizes="16x16" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="files/default_images/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="files/default_images/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="files/default_images/queue-it_appletouch.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="files/default_images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="files/default_images/favicon-16x16.png"
+      sizes="16x16"
+    />
     <link rel="shortcut icon" href="files/default_images/queue-it.ico" />
     <meta name="application-name" content=" " />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="files/default_images/mstile-144x144.png" />
+    <meta
+      name="msapplication-TileImage"
+      content="files/default_images/mstile-144x144.png"
+    />
     <link rel="stylesheet" href="files/default_style.css" type="text/css" />
     <!-- [if lte IE 7]><link rel='stylesheet' href='files/ie.css' type='text/css' /><![endif] -->
     <link rel="stylesheet" href="files/temp.css" type="text/css" />
@@ -37,11 +64,17 @@
     </script>
     <script type="text/javascript" src="files/common.js"></script>
     <script>
-      window.jQuery || document.write('<script src="' + getScriptBasePath() + "common.js" + '"><\/script>');
+      window.jQuery ||
+        document.write(
+          '<script src="' + getScriptBasePath() + "common.js" + '"><\/script>'
+        );
     </script>
     <script type="text/javascript" src="files/queueit.js"></script>
     <script>
-      window.QueueIt || document.write('<script src="' + getScriptBasePath() + "queueit.js" + '"><\/script>');
+      window.QueueIt ||
+        document.write(
+          '<script src="' + getScriptBasePath() + "queueit.js" + '"><\/script>'
+        );
 
       if (window.soundManager) window.soundManager.debugMode = false;
     </script>
@@ -401,7 +434,8 @@
                 Value: "cy-GB",
               },
             ],
-            whatIsThisUrl: "https://queue-it.com/what-is-this/?preview=true&customerId=frontenddevelopers&hostUrl=localhost",
+            whatIsThisUrl:
+              "https://queue-it.com/what-is-this/?preview=true&customerId=frontenddevelopers&hostUrl=localhost",
             queueItLogoPointsToUrl:
               "https://queue-it.com/what-is-this/?customerId=frontenddevelopers&eventId=localhost&queueId=00000000-0000-0000-0000-000000000001&language=en-US&hostUrl=localhost",
             welcomeSoundUrls: null,
@@ -440,7 +474,8 @@
           layoutVersion: 1,
           updateInterval: 0,
         },
-        captchaVerifyEndpoint: "https://eu-west-1-verifycaptcha-api.queue-it.net/captchaverify",
+        captchaVerifyEndpoint:
+          "https://eu-west-1-verifycaptcha-api.queue-it.net/captchaverify",
         captchaPublicKey: "6Lc9sScUAAAAALTk003eM2ytnYGGKQaQa7usPKwo",
         showCaptcha: false,
         captchaInvisiblePublicKey: "6LePTyoUAAAAADPttQg1At44EFCygqxZYzgleaKp",
@@ -449,7 +484,10 @@
       });
 
       window.queueViewModel.init();
-      window.PreviewQueueStateVM = new QueueIt.Queue.PreviewQueueStateVM(window.queueViewModel, window.queueViewModel.options.inqueueInfo);
+      window.PreviewQueueStateVM = new QueueIt.Queue.PreviewQueueStateVM(
+        window.queueViewModel,
+        window.queueViewModel.options.inqueueInfo
+      );
 
       $(document).ready(function () {
         ko.applyBindings(window.queueViewModel);
@@ -667,9 +705,14 @@
 
   <body data-pageid="queue" data-culture="en-US" class="queue">
     <div id="noscript" style="display: none">
-      <div id="BodyTop_nojavascriptenabled" class="nojavascript alert alert-error">
-        JavaScript is not enabled in your browser. Please enable JavaScript for automated updates. If you do not want to enable JavaScript, you must manually
-        refresh this page to view your place in line. You can also click <a href="#">here</a> to automatically reload this page.
+      <div
+        id="BodyTop_nojavascriptenabled"
+        class="nojavascript alert alert-error"
+      >
+        JavaScript is not enabled in your browser. Please enable JavaScript for
+        automated updates. If you do not want to enable JavaScript, you must
+        manually refresh this page to view your place in line. You can also
+        click <a href="#">here</a> to automatically reload this page.
       </div>
     </div>
     <script type="text/javascript">
@@ -687,108 +730,179 @@
       </div>
       <div id="PreviewStatesContent">
         <p class="explain">
-          Components of the <span class="beforeElement">before</span><span class="queueElement">queue</span> page that will be visible when:
+          Components of the <span class="beforeElement">before</span
+          ><span class="queueElement">queue</span> page that will be visible
+          when:
         </p>
         <label class="cblabel">
-          <input type="checkbox" data-bind="checked: PreviewQueueStateVM.connectionLost" />
+          <input
+            type="checkbox"
+            data-bind="checked: PreviewQueueStateVM.connectionLost"
+          />
           The user's internet connection is lost
           <span class="qmark">
             ?
-            <span class="tooltip">A warning message is displayed instead of the queue information when the user loses internet connection</span>
+            <span class="tooltip"
+              >A warning message is displayed instead of the queue information
+              when the user loses internet connection</span
+            >
           </span>
         </label>
         <label class="cblabel queueElement">
-          <input type="checkbox" data-bind="checked: PreviewQueueStateVM.javascriptDisabled" />
+          <input
+            type="checkbox"
+            data-bind="checked: PreviewQueueStateVM.javascriptDisabled"
+          />
           JavaScript is disabled in the user's browser
           <span class="qmark">
             ?
-            <span class="tooltip">A warning message is displayed on top of the page if JavaScript is not enabled in the user's browser</span>
+            <span class="tooltip"
+              >A warning message is displayed on top of the page if JavaScript
+              is not enabled in the user's browser</span
+            >
           </span>
         </label>
         <label class="cblabel queueElement">
-          <input type="checkbox" data-bind="checked: PreviewQueueStateVM.queuePaused" />
+          <input
+            type="checkbox"
+            data-bind="checked: PreviewQueueStateVM.queuePaused"
+          />
           The queue is paused
           <span class="qmark">
             ?
             <span class="tooltip"
-              >While the queue is paused, this information is displayed instead of estimated wait time and/or expected arrival time on the website</span
+              >While the queue is paused, this information is displayed instead
+              of estimated wait time and/or expected arrival time on the
+              website</span
             >
           </span>
         </label>
         <label class="cblabel queueElement">
-          <input type="checkbox" data-bind="checked: PreviewQueueStateVM.firstInLine" />
+          <input
+            type="checkbox"
+            data-bind="checked: PreviewQueueStateVM.firstInLine"
+          />
           The user is first in line
           <span class="qmark">
             ?
             <span class="tooltip"
-              >When the user is first in line, the displayed message changes from "Number of users in queue ahead of you: [number]" to "It is your turn"</span
+              >When the user is first in line, the displayed message changes
+              from "Number of users in queue ahead of you: [number]" to "It is
+              your turn"</span
             >
           </span>
         </label>
         <label class="cblabel queueElement">
-          <input type="checkbox" data-bind="checked: PreviewQueueStateVM.serviceSoon, enable:PreviewQueueStateVM.firstInLine" disabled="" />
+          <input
+            type="checkbox"
+            data-bind="checked: PreviewQueueStateVM.serviceSoon, enable:PreviewQueueStateVM.firstInLine"
+            disabled=""
+          />
           The user is being redirected to the website
           <span class="qmark">
             ?
             <span class="tooltip"
-              >Just before being redirected to the website, redirection information is displayed instead of estimated wait time and/or expected arrival time on
-              the website</span
+              >Just before being redirected to the website, redirection
+              information is displayed instead of estimated wait time and/or
+              expected arrival time on the website</span
             >
           </span>
         </label>
         <label class="cblabel queueElement">
-          <input type="checkbox" data-bind="checked: PreviewQueueStateVM.redirectModal" />
+          <input
+            type="checkbox"
+            data-bind="checked: PreviewQueueStateVM.redirectModal"
+          />
           It's the user's turn and the queue browser tab is inactive
           <span class="qmark">
             ?
             <span class="tooltip"
-              >In this situation, a pop-up message is displayed informing the user when their turn started and asking them to confirm that they want to proceed
-              to the website</span
+              >In this situation, a pop-up message is displayed informing the
+              user when their turn started and asking them to confirm that they
+              want to proceed to the website</span
             >
           </span>
         </label>
-        <label class="cblabel" data-bind="visible:PreviewQueueStateVM.dynamicMessageVisibleByLayout">
-          <input type="checkbox" data-bind="checked: PreviewQueueStateVM.hideDynamicMessage" />
+        <label
+          class="cblabel"
+          data-bind="visible:PreviewQueueStateVM.dynamicMessageVisibleByLayout"
+        >
+          <input
+            type="checkbox"
+            data-bind="checked: PreviewQueueStateVM.hideDynamicMessage"
+          />
           No dynamic message has been posted
           <span class="qmark">
             ?
             <span class="tooltip"
-              >If there is no dynamic message saved on the event console, then the dynamic message section is hidden from the
-              <span class="beforeElement">before</span><span class="queueElement">queue</span> page for all users</span
+              >If there is no dynamic message saved on the event console, then
+              the dynamic message section is hidden from the
+              <span class="beforeElement">before</span
+              ><span class="queueElement">queue</span> page for all users</span
             >
           </span>
         </label>
-        <div id="reminderStatusMesage" class="queueElement" data-bind="visible: PreviewQueueStateVM.reminderFormVisibleByLayout">
+        <div
+          id="reminderStatusMesage"
+          class="queueElement"
+          data-bind="visible: PreviewQueueStateVM.reminderFormVisibleByLayout"
+        >
           <label id="reminderStatusLabel" class="cblabel">
             The user enters:
             <span class="qmark">
               ?
               <span class="tooltip"
-                >After the user enters an email address and clicks on "Notify me by e-mail", a status message is displayed for 60 seconds</span
+                >After the user enters an email address and clicks on "Notify me
+                by e-mail", a status message is displayed for 60 seconds</span
               >
             </span>
           </label>
           <label class="cblabel"
-            ><input type="radio" name="reminderMessage" value="success" data-bind="checked: PreviewQueueStateVM.reminderEmailStatus" />
+            ><input
+              type="radio"
+              name="reminderMessage"
+              value="success"
+              data-bind="checked: PreviewQueueStateVM.reminderEmailStatus"
+            />
             A valid email address
           </label>
           <label class="cblabel"
-            ><input type="radio" name="reminderMessage" value="error" data-bind="checked: PreviewQueueStateVM.reminderEmailStatus" /> An empty or invalid email
-            address</label
+            ><input
+              type="radio"
+              name="reminderMessage"
+              value="error"
+              data-bind="checked: PreviewQueueStateVM.reminderEmailStatus"
+            />
+            An empty or invalid email address</label
           >
-          <button data-bind="click: PreviewQueueStateVM.hideReminderStatusMessage, enable: PreviewQueueStateVM.reminderEmailStatus" disabled="">
+          <button
+            data-bind="click: PreviewQueueStateVM.hideReminderStatusMessage, enable: PreviewQueueStateVM.reminderEmailStatus"
+            disabled=""
+          >
             Hide now
           </button>
         </div>
       </div>
     </div>
     <div id="toppanel" data-bind="visible: layout.topPanelVisible">
-      <iframe id="toppanel_iframe" src="files/top.html" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+      <iframe
+        id="toppanel_iframe"
+        src="files/top.html"
+        allowtransparency="true"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
     </div>
 
     <div id="wrapper">
       <div id="leftpanel" data-bind="visible: layout.leftPanelVisible">
-        <iframe id="leftpanel_iframe" src="files/left.html" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+        <iframe
+          id="leftpanel_iframe"
+          src="files/left.html"
+          allowtransparency="true"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
       </div>
 
       <div id="main">
@@ -846,8 +960,11 @@
           </div>
           <div id="main-top-message">
             <p class="item">
-              <span id="lbCookieInfo" title="You will not lose your place in line if you close this page, but you must return when your turn comes up."
-                >You can close this page without losing your place in line.</span
+              <span
+                id="lbCookieInfo"
+                title="You will not lose your place in line if you close this page, but you must return when your turn comes up."
+                >You can close this page without losing your place in
+                line.</span
               >
             </p>
           </div>
@@ -857,14 +974,22 @@
           <div id="content">
             <div id="header">
               <h1 class="logo" data-bind="visible: layout.logoVisible">
-                <img src="files/default_images/queue-it_logo.png" id="imgCustomerLogo" alt="logo" longdesc="company logo for Queue-it" />
+                <img
+                  src="files/default_images/queue-it_logo.png"
+                  id="imgCustomerLogo"
+                  alt="logo"
+                  longdesc="company logo for Queue-it"
+                />
               </h1>
               <h2>
-                <span id="lbHeaderH2" data-bind="html: texts.header">You are now in line</span>
+                <span id="lbHeaderH2" data-bind="html: texts.header"
+                  >You are now in line</span
+                >
               </h2>
               <div id="headerparagraph">
                 <span id="lbHeaderP" data-bind="html: texts.body"
-                  >You are in line for [Event Name]. When it is your turn, you will have 10 minutes to enter the website.</span
+                  >You are in line for [Event Name]. When it is your turn, you
+                  will have 10 minutes to enter the website.</span
                 >
               </div>
               <div id="whatisthis">
@@ -876,18 +1001,35 @@
                 >
               </div>
             </div>
-            <div id="divConfirmRedirectModal" class="modal queueElement" data-bind="visible: showConfirmRedirectDialog()" style="display: none">
+            <div
+              id="divConfirmRedirectModal"
+              class="modal queueElement"
+              data-bind="visible: showConfirmRedirectDialog()"
+              style="display: none"
+            >
               <div class="modal-background"></div>
               <div id="divConfirmRedirectModal_Content" class="modal-content">
                 <div class="modal-body">
                   <h2 id="h2ConfirmRedirect">Your turn started at</h2>
-                  <h3 data-bind="{visible:ticket.windowStartTime()}" style="display: none">
+                  <h3
+                    data-bind="{visible:ticket.windowStartTime()}"
+                    style="display: none"
+                  >
                     <span data-bind="{text:ticket.windowStartTime()}"></span>
                     <span data-bind="{text:ticket.timeZonePostfix()}"></span>
                   </h3>
-                  <p id="pConfirmRedirect">Please confirm that you want to proceed to the site as soon as possible</p>
-                  <button id="buttonConfirmRedirect" type="button" class="btn" data-bind="click: setActiveClient">
-                    <span class="l">Yes, please</span><span class="r">&nbsp;</span>
+                  <p id="pConfirmRedirect">
+                    Please confirm that you want to proceed to the site as soon
+                    as possible
+                  </p>
+                  <button
+                    id="buttonConfirmRedirect"
+                    type="button"
+                    class="btn"
+                    data-bind="click: setActiveClient"
+                  >
+                    <span class="l">Yes, please</span
+                    ><span class="r">&nbsp;</span>
                   </button>
                 </div>
               </div>
@@ -898,112 +1040,480 @@
                 <div class="progressbar-dropdown-container">
                   <label for="progressbar-dropdown"> </label>
                   <select name="progressbar-dropdown" id="progressbarDropdown">
-                    <option value="" disabled selected>Select Progress Bar</option>
+                    <option value="" disabled selected>
+                      Select Progress Bar
+                    </option>
                     <option value="all">All</option>
                   </select>
+                  <button type="button" class="relevant-btn">
+                    Relevant Code
+                  </button>
+                  <div class="relevant-code">
+                    <div id="relevant-html">
+                      JavaScript
+                      <br />
+                      <code></code>
+                    </div>
+                    <div id="relevant-css">
+                      CSS
+                      <br />
+                      <code id="standard">
+                        .progressbar { background: #fff; border: 2px solid #000;
+                        border-radius: 4px; margin: 5px auto; } <br />
+                        .progressbar .progress, .progressbar .progress.updated {
+                        background-color: var(--green-light-bold);
+                        background-image: none; background-image:
+                        linear-gradient( 90deg, rgba(255, 255, 255, 0) 13px,
+                        #000 13px ); background-size: 15px; border-radius: 2px;
+                        }
+                      </code>
+                      <code id="multi-colored">
+                        @-webkit-keyframes multi_colored { from {
+                        background-position: 0px; } to { background-position:
+                        40px; } } <br />
+                        @-moz-keyframes multi_colored { from {
+                        background-position: 0px; } to { background-position:
+                        40px; } }<br />
+                        @keyframes multi_colored { from { background-position:
+                        0px; } to { background-position: 40px; } }<br />
+                        .progressbar.multi-colored { background: rgba(0, 0, 0,
+                        0); border: 1px solid rgba(0, 0, 0, 0.5); }<br />
+                        .progressbar.multi-colored .progress { background-color:
+                        #fff; background-image: none; border-radius: 3px; }<br />
+
+                        .progressbar.multi-colored .progress.updated {
+                        background-color: #fff; background-image: none;
+                        -webkit-animation: multi_colored 1s linear infinite;
+                        -moz-animation: multi_colored 1s linear infinite;
+                        animation: multi_colored 1s linear infinite; }<br />
+                        .progressbar.multi-colored .progress,
+                        .progressbar.multi-colored .progress.updated {
+                        background-image: linear-gradient( 90deg,
+                        var(--green-light-bold) 10px, var(--green) 11px,
+                        var(--green) 20px, var(--green-light-light) 20px,
+                        var(--green-light-light) 29px, var(--green-light-medium)
+                        30px ); background-size: 40px; }
+                      </code>
+                      <code id="diagonal">
+                        @-webkit-keyframes diagonal { from {
+                        background-position: 0px; } to { background-position:
+                        50px; } }<br />
+                        @-moz-keyframes diagonal { from { background-position:
+                        0px; } to { background-position: 50px; } } <br />
+                        @keyframes diagonal { from { background-position: 0px; }
+                        to { background-position: 50px; } } <br />
+
+                        .progressbar.diagonal { background: #fff; border: 1px
+                        solid #000; border-radius: 15px; } <br />
+                        .progressbar.diagonal .progress, .progressbar.diagonal
+                        .progress.updated { background-color: black;
+                        background-image: linear-gradient( 130deg,
+                        var(--green-light-bold) 19px, var(--green-light-light)
+                        20px, var(--green-light-light) 38px,
+                        var(--green-light-bold) 39px ); background-size: 50px;
+                        border-radius: 15px; } <br />
+
+                        .progressbar.diagonal .progress.updated {
+                        -webkit-animation: diagonal 1s linear infinite;
+                        -moz-animation: diagonal 1s linear infinite; animation:
+                        diagonal 1s linear infinite; } <br />
+                        .progressbar.diagonal .progress .runner,
+                        .progressbar.diagonal .progress .runner.paused {
+                        display: none; }
+                      </code>
+                      <code id="burst">
+                        @-webkit-keyframes burst { 0% { background-position: 50%
+                        50%, 0; } 100% { background-position: -100% 50%, 0; } }
+                        <br />
+                        @-moz-keyframes burst { 0% { background-position: 50%
+                        50%, 0; } 100% { background-position: -100% 50%, 0; } }
+                        <br />
+                        @keyframes burst { 0% { background-position: 50% 50%, 0;
+                        } 100% { background-position: -100% 50%, 0; } } <br />
+                        .progressbar.burst { border: 1px solid #000; } <br />
+                        .progressbar.burst .progress, .progressbar.burst
+                        .progress.updated { background-color:
+                        var(--green-light-bold); background-image: none;
+                        background-size: 200% 100%; background-image:
+                        linear-gradient( 90deg, var(--green-light-bold) 0%,
+                        var(--green-light-bold) 100% ); } <br />
+
+                        .progressbar.burst .progress.updated { background-image:
+                        linear-gradient( 90deg, var(--green-light-bold) 0%,
+                        rgba(255, 255, 255, 0.842) 20%, var(--green-light-bold)
+                        22% ); -webkit-animation: burst 2s ease-out 3 forwards;
+                        -moz-animation: burst 2s ease-out 3 forwards; animation:
+                        burst 2s ease-out 3 forwards; } <br />
+                        .progressbar.burst .progress .runner, .progressbar.burst
+                        .progress .runner.paused { background-repeat: no-repeat;
+                        display: none; }
+                      </code>
+                      <code id="bracket">
+                        @-webkit-keyframes bracket { from { background-position:
+                        0px bottom, 0px top, 0, 0; } to { background-position:
+                        50px bottom, 50px top, 0, 0; } } <br />
+
+                        @-moz-keyframes bracket { from { background-position:
+                        0px bottom, 0px top, 0, 0; } to { background-position:
+                        50px bottom, 50px top, 0, 0; } } <br />
+
+                        @keyframes bracket { from { background-position: 0px
+                        bottom, 0px top, 0, 0; } to { background-position: 50px
+                        bottom, 50px top, 0, 0; } } <br />
+
+                        /* progressbar ppp */ .progressbar.bracket { background:
+                        rgba(0, 0, 0, 0); border: 1px solid rgba(0, 0, 0, 0.5);
+                        border-radius: 4.4px; } <br />
+
+                        .progressbar.bracket .progress, .progressbar.bracket
+                        .progress.updated { background-color: rgba(0, 0, 0, 0);
+                        background-image: linear-gradient( 126deg, rgba(0, 0, 0,
+                        0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px ),
+                        linear-gradient( 55deg, rgba(0, 0, 0, 0) 19px, #000
+                        20px, rgba(0, 0, 0, 0) 21px ), linear-gradient( 90deg,
+                        var(--green), var(--green-light-bold),
+                        var(--green-light-light), var(--green-light-medium) );
+                        background-size: 50px 50%, 50px 50%, cover, 100% 100%;
+                        background-position: 50px bottom, 50px top, 0, 0;
+                        background-repeat: repeat-x, repeat-x, no-repeat,
+                        no-repeat; border-radius: 3px; } <br />
+
+                        .progressbar.bracket .progress.updated {
+                        -webkit-animation: bracket 1s linear infinite
+                        !important; -moz-animation: bracket 1s linear infinite
+                        !important; animation: bracket 1s linear infinite
+                        !important; } <br />
+
+                        .progressbar.bracket .progress .runner,
+                        .progressbar.bracket .progress .runner.paused {
+                        background-repeat: repeat-x, repeat-x, no-repeat;
+                        display: none; }
+                      </code>
+                      <code id="radial-progressbar">
+                        .radial-progressbar-background { background-image:
+                        url(./WatchSVG.svg); background-size: contain;
+                        background-position: center; background-repeat:
+                        no-repeat; height: 207px; /*@circle-size */ width:
+                        155px; /*@circle-size */ margin: 0px auto; /*
+                        margin-bottom: -186px; */ position: absolute; z-index:
+                        99; top: -26px; display: none; } <br />
+                        .progressbar.radial-progressbar { height: 150px;
+                        /*@circle-size */ width: 150px; /*@circle-size */
+                        margin: 15px auto; border-radius: 50%; border: none; }
+                        <br />
+
+                        .circle .mask, .circle .fill, .circle .shadow { height:
+                        150px; /*@circle-size */ width: 150px; /*@circle-size */
+                        border-radius: 50%; position: absolute; } <br />
+                        .circle .shadow { box-shadow: 0px 0 40px 0px inset
+                        rgba(0, 0, 0, 1); } <br />
+                        .circle .mask, .circle .fill {
+                        -webkit-backface-visibility: hidden; transition:
+                        -webkit-transform 1s; transition: -ms-transform 1s;
+                        transition: transform 1s; border-radius: 50%; }
+                        <br />
+                        .circle .mask { clip: rect( 0px, 150px, 150px, 75px );
+                        /*clip: rect(0px, @circle-size, @circle-size,
+                        @circle-size/2); */ } <br />
+                        .circle .mask .fill { clip: rect( 0px, 75px, 150px, 0px
+                        ); /*clip: rect(0px, @circle-size/2, @circle-size,
+                        0px);*/ background-color: var(--green); } <br />
+
+                        .circle-inset { background-color: rgba(255, 255, 255,
+                        0.4); width: 150px; height: 150px; position: relative;
+                        border-radius: 50%; box-shadow: inset 0px 0px 20px 0px
+                        rgba(49, 46, 46, 0.61); /* border: 1px solid rgba(136,
+                        136, 136, 0.58); */ } <br />
+                        .circle-inset .runner { width: 80px; height: 80px;
+                        position: relative; top: 8px; left: 9px;
+                        background-image: url(player_w_right_walk1-0.2.gif);
+                        background-size: 80%; background-position: 5px center;
+                        background-repeat: no-repeat; }
+                        <br />
+
+                        .circle-inset .runner.paused { left: 33px;
+                        background-image: url(./person_pause_w.png);
+                        background-size: 80%; background-position: 7px center;
+                        background-repeat: no-repeat; }
+                        <br />
+                        .circle-inset .contents { /*for percentage display */ /*
+                        display: none; */ position: absolute; top: 40px; left:
+                        30px; line-height: 1; text-align: center; color: #000;
+                        font-weight: 800; } <br />
+
+                        .circle .mask.full, .circle .fill { -webkit-transform:
+                        rotate(0deg); -ms-transform: rotate(0deg); transform:
+                        rotate(0deg); } <br />
+                        .circle .fill.fix { -webkit-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg); transform: rotate(0deg); }
+                      </code>
+                      <code id="shoe">
+                        .progressbar.shoe { background: rgba(0, 0, 0, 0);
+                        border: none; height: 200px; background-image:
+                        url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeStroke.png");
+                        background-repeat: no-repeat; background-size: auto
+                        200px; background-position: 10px; }<br />
+
+                        .progressbar.shoe .progress, .progressbar.shoe
+                        .progress.updated { background-color: rgba(0, 0, 0, 0);
+                        background-image:
+                        url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeImg2.png");
+                        background-repeat: no-repeat; background-size: auto
+                        200px; background-position: 10px; }<br />
+
+                        .progressbar.shoe .progress.updated { animation: none;
+                        }<br />
+
+                        .progressbar.shoe .progress .runner, .progressbar.shoe
+                        .progress .runner.paused { background-image: none; }
+                      </code>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="warning-box">
               <p class="beforeElement">
-                <span id="MainPart_lbEventStartsAtText">The event will begin at:</span>
-                <span id="MainPart_lbEventStartTime" data-bind="text: ticket.eventStartTimeFormatted">2:22 PM</span>
-                <span id="MainPart_lbEventStartTimeTimeZonePostfix" data-bind="text: ticket.timeZonePostfix"></span>
+                <span id="MainPart_lbEventStartsAtText"
+                  >The event will begin at:</span
+                >
+                <span
+                  id="MainPart_lbEventStartTime"
+                  data-bind="text: ticket.eventStartTimeFormatted"
+                  >2:22 PM</span
+                >
+                <span
+                  id="MainPart_lbEventStartTimeTimeZonePostfix"
+                  data-bind="text: ticket.timeZonePostfix"
+                ></span>
               </p>
-              <div id="MainPart_divProgressbar" class="progressbar queueElement standard" data-bind="visible: layout.progressVisible">
-                <div id="MainPart_divProgressbar_Progress" class="progress updated" style="width: 75%">
-                  <div id="MainPart_divProgressbar_Progress_Runner" class="runner" data-bind="css: { paused: layout.queueIsPausedVisible }"></div>
+              <div
+                id="MainPart_divProgressbar"
+                class="progressbar queueElement standard"
+                data-bind="visible: layout.progressVisible"
+              >
+                <div
+                  id="MainPart_divProgressbar_Progress"
+                  class="progress updated"
+                  style="width: 75%"
+                >
+                  <div
+                    id="MainPart_divProgressbar_Progress_Runner"
+                    class="runner"
+                    data-bind="css: { paused: layout.queueIsPausedVisible }"
+                  ></div>
                 </div>
                 <div id="MainPart_divProgressbar_Clear" class="clear"></div>
               </div>
             </div>
-            <div id="MainPart_lbManualUpdateWarning" style="display: none" class="alert alert-error" data-bind="visible: !isRunning()">
-              You have lost your connection to the line. Please check your internet connection.
+            <div
+              id="MainPart_lbManualUpdateWarning"
+              style="display: none"
+              class="alert alert-error"
+              data-bind="visible: !isRunning()"
+            >
+              You have lost your connection to the line. Please check your
+              internet connection.
             </div>
-            <div id="MainPart_divProgressbarBox" data-bind="visible: isRunning()" class="processbar-box">
+            <div
+              id="MainPart_divProgressbarBox"
+              data-bind="visible: isRunning()"
+              class="processbar-box"
+            >
               <div id="MainPart_divProgressbarBox_Holder" class="holder">
                 <!-- before/idle -->
                 <div id="defaultCountdown" class="beforeElement"></div>
                 <p class="larger beforeElement"></p>
-                <div id="MainPart_divUsersInQueueCount" style="display: none" data-bind="visible: layout.usersInQueueVisible">
-                  <span id="MainPart_lbUsersInQueueCountText">Total number of users in line:</span>
-                  <span id="MainPart_lbUsersInQueueCount" data-bind="text: ticket.usersInQueue">0</span>
+                <div
+                  id="MainPart_divUsersInQueueCount"
+                  style="display: none"
+                  data-bind="visible: layout.usersInQueueVisible"
+                >
+                  <span id="MainPart_lbUsersInQueueCountText"
+                    >Total number of users in line:</span
+                  >
+                  <span
+                    id="MainPart_lbUsersInQueueCount"
+                    data-bind="text: ticket.usersInQueue"
+                    >0</span
+                  >
                 </div>
                 <p></p>
                 <!-- queue -->
-                <p id="MainPart_pProgressbarBox_Holder_Larger" class="larger queueElement">
+                <p
+                  id="MainPart_pProgressbarBox_Holder_Larger"
+                  class="larger queueElement"
+                >
                   <span data-bind="visible: layout.queueNumberVisible">
-                    <span id="MainPart_lbQueueNumberText">Your number in line:</span>
-                    <span id="MainPart_lbQueueNumber" data-bind="text: ticket.queueNumber">8445</span>
+                    <span id="MainPart_lbQueueNumberText"
+                      >Your number in line:</span
+                    >
+                    <span
+                      id="MainPart_lbQueueNumber"
+                      data-bind="text: ticket.queueNumber"
+                      >8445</span
+                    >
                     <br id="MainPart_lbQueueNumberLineBreak" />
                   </span>
-                  <span id="MainPart_lbUsersInLineAheadOfYouText" data-bind="visible: layout.usersInLineAheadOfYouVisible"
+                  <span
+                    id="MainPart_lbUsersInLineAheadOfYouText"
+                    data-bind="visible: layout.usersInLineAheadOfYouVisible"
                     >Number of users in line ahead of you:</span
                   >
-                  <span id="MainPart_lbUsersInLineAheadOfYou" data-bind="visible: layout.usersInLineAheadOfYouVisible, text: ticket.usersInLineAheadOfYou"
+                  <span
+                    id="MainPart_lbUsersInLineAheadOfYou"
+                    data-bind="visible: layout.usersInLineAheadOfYouVisible, text: ticket.usersInLineAheadOfYou"
                     >1758</span
                   >
-                  <span id="first-in-line" style="display: none" data-bind="visible: layout.firstInLineVisible">It is your turn</span>
+                  <span
+                    id="first-in-line"
+                    style="display: none"
+                    data-bind="visible: layout.firstInLineVisible"
+                    >It is your turn</span
+                  >
                   <br
                     id="MainPart_lbUsersInLineAheadOfYouLineBreak"
                     data-bind="visible: layout.usersInLineAheadOfYouVisible() || layout.firstInLineVisible()"
                   />
-                  <span id="MainPart_lbExpectedServiceTimeText" data-bind="visible: layout.expectedServiceTimeVisible"
+                  <span
+                    id="MainPart_lbExpectedServiceTimeText"
+                    data-bind="visible: layout.expectedServiceTimeVisible"
                     >Expected arrival time on the website:</span
                   >
-                  <span id="MainPart_lbExpectedServiceTime" data-bind="visible: layout.expectedServiceTimeVisible, text: ticket.expectedServiceTime"
+                  <span
+                    id="MainPart_lbExpectedServiceTime"
+                    data-bind="visible: layout.expectedServiceTimeVisible, text: ticket.expectedServiceTime"
                     >1:28 PM</span
                   >
                   <span
                     id="MainPart_lbExpectedServiceTimeTimeZonePostfix"
                     data-bind="visible: layout.expectedServiceTimeVisible, text: ticket.timeZonePostfix"
                   ></span>
-                  <span id="queue-paused" style="display: none" data-bind="visible: layout.queueIsPausedVisible">The line is paused.</span>
-                  <br id="MainPart_lbExpectedServiceTimeLineBreak" data-bind="visible: layout.expectedServiceTimeVisible() || layout.queueIsPausedVisible()" />
-                  <span id="serviced-soon" style="display: none" data-bind="visible: layout.servicedSoonVisible()">
-                    <span data-bind="visible: !layout.servicedSoonDelayVisible()">Thank you for waiting. You are now being redirected to the website.</span>
-                    <span data-bind="visible: layout.servicedSoonDelayVisible()" style="display: none"
-                      >You're almost there. You will be redirected to the website as soon as possible.</span
+                  <span
+                    id="queue-paused"
+                    style="display: none"
+                    data-bind="visible: layout.queueIsPausedVisible"
+                    >The line is paused.</span
+                  >
+                  <br
+                    id="MainPart_lbExpectedServiceTimeLineBreak"
+                    data-bind="visible: layout.expectedServiceTimeVisible() || layout.queueIsPausedVisible()"
+                  />
+                  <span
+                    id="serviced-soon"
+                    style="display: none"
+                    data-bind="visible: layout.servicedSoonVisible()"
+                  >
+                    <span
+                      data-bind="visible: !layout.servicedSoonDelayVisible()"
+                      >Thank you for waiting. You are now being redirected to
+                      the website.</span
+                    >
+                    <span
+                      data-bind="visible: layout.servicedSoonDelayVisible()"
+                      style="display: none"
+                      >You're almost there. You will be redirected to the
+                      website as soon as possible.</span
                     >
                   </span>
-                  <span id="MainPart_lbWhichIsInText" data-bind="visible: layout.whichIsInVisible">Your estimated wait time is:</span>
-                  <span id="MainPart_lbWhichIsIn" data-bind="visible: layout.whichIsInVisible, text: ticket.whichIsIn">5 minutes</span>
+                  <span
+                    id="MainPart_lbWhichIsInText"
+                    data-bind="visible: layout.whichIsInVisible"
+                    >Your estimated wait time is:</span
+                  >
+                  <span
+                    id="MainPart_lbWhichIsIn"
+                    data-bind="visible: layout.whichIsInVisible, text: ticket.whichIsIn"
+                    >5 minutes</span
+                  >
                 </p>
-                <ul id="MainPart_ulProgressbarBox_Holder_Processbar" class="processbar">
+                <ul
+                  id="MainPart_ulProgressbarBox_Holder_Processbar"
+                  class="processbar"
+                >
                   <li id="defaultViewPb1" class="active">
                     <span>&nbsp;</span>
                   </li>
                 </ul>
-                <div id="MainPart_divProgressbarBox_Holder_LastUpdateTime" data-bind="visible: isRunning">
-                  <span id="MainPart_lbLastUpdateTime" title="Everything is fine, as long the 'Status last updated' time is updated regularly."
+                <div
+                  id="MainPart_divProgressbarBox_Holder_LastUpdateTime"
+                  data-bind="visible: isRunning"
+                >
+                  <span
+                    id="MainPart_lbLastUpdateTime"
+                    title="Everything is fine, as long the 'Status last updated' time is updated regularly."
                     >Status last updated:</span
                   >
-                  <span id="MainPart_lbLastUpdateTimeText" data-bind="text: ticket.lastUpdated">12:19:30 PM</span>
-                  <span id="MainPart_lbLastUpdateTimeTextTimeZonePostfix" data-bind="text: ticket.timeZonePostfix"></span>
+                  <span
+                    id="MainPart_lbLastUpdateTimeText"
+                    data-bind="text: ticket.lastUpdated"
+                    >12:19:30 PM</span
+                  >
+                  <span
+                    id="MainPart_lbLastUpdateTimeTextTimeZonePostfix"
+                    data-bind="text: ticket.timeZonePostfix"
+                  ></span>
                 </div>
               </div>
             </div>
             <div id="MainPart_divBlock" class="block beforeElement">
               <p></p>
             </div>
-            <div id="MainPart_divTimeBox" class="time-box" style="" data-bind="visible: layout.dynamicMessageVisible() &amp;&amp; message()">
-              <div id="MainPart_divTimeBox_Holder" class="holder" data-bind="if: message">
+            <div
+              id="MainPart_divTimeBox"
+              class="time-box"
+              style=""
+              data-bind="visible: layout.dynamicMessageVisible() &amp;&amp; message()"
+            >
+              <div
+                id="MainPart_divTimeBox_Holder"
+                class="holder"
+                data-bind="if: message"
+              >
                 <div id="MainPart_divTimeBox_Holder_Frame" class="frame">
                   <h2>
-                    <span id="MainPart_h2MessageOnQueueTicket" data-bind="text: message().header">Message last updated:</span>
-                    <span id="MainPart_h2MessageOnQueueTicketTimeText" data-bind="text: message().timestampFormatted">12:19 PM</span>
-                    <span id="MainPart_h2MessageOnQueueTicketTimeTextTimeZonePostfix" data-bind="text: message().timeZonePostfix"></span>
+                    <span
+                      id="MainPart_h2MessageOnQueueTicket"
+                      data-bind="text: message().header"
+                      >Message last updated:</span
+                    >
+                    <span
+                      id="MainPart_h2MessageOnQueueTicketTimeText"
+                      data-bind="text: message().timestampFormatted"
+                      >12:19 PM</span
+                    >
+                    <span
+                      id="MainPart_h2MessageOnQueueTicketTimeTextTimeZonePostfix"
+                      data-bind="text: message().timeZonePostfix"
+                    ></span>
                   </h2>
-                  <p id="MainPart_pMessageOnQueueTicket" data-bind="creoleText: message().text"></p>
+                  <p
+                    id="MainPart_pMessageOnQueueTicket"
+                    data-bind="creoleText: message().text"
+                  ></p>
                 </div>
               </div>
             </div>
-            <div id="MainPart_frmReminder2" name="Notify me" class="reminder-form queueElement" data-bind="visible: layout.reminderVisible">
+            <div
+              id="MainPart_frmReminder2"
+              name="Notify me"
+              class="reminder-form queueElement"
+              data-bind="visible: layout.reminderVisible"
+            >
               <h2>
-                <span id="MainPart_lbNotyfyMeText">Please notify me when it is my turn:</span>
+                <span id="MainPart_lbNotyfyMeText"
+                  >Please notify me when it is my turn:</span
+                >
               </h2>
-              <div id="MainPart_divEmailInput" class="row" data-bind="visible: layout.reminderEmailVisible">
-                <form id="MainPart_FormEmailInput" name="Email notification form">
+              <div
+                id="MainPart_divEmailInput"
+                class="row"
+                data-bind="visible: layout.reminderEmailVisible"
+              >
+                <form
+                  id="MainPart_FormEmailInput"
+                  name="Email notification form"
+                >
                   <input
                     name="ctl00$MainPart$inpEmailAddress"
                     type="text"
@@ -1013,8 +1523,14 @@
                     placeholder="Enter email address"
                     data-bind="value: emailAddress"
                   />
-                  <button type="submit" class="btn" id="aUpdateEmail" data-bind="click: updateNotify">
-                    <span class="l">Notify me by e-mail</span><span class="r">&nbsp;</span>
+                  <button
+                    type="submit"
+                    class="btn"
+                    id="aUpdateEmail"
+                    data-bind="click: updateNotify"
+                  >
+                    <span class="l">Notify me by e-mail</span
+                    ><span class="r">&nbsp;</span>
                   </button>
                 </form>
                 <div id="divEmailStatusFrame">
@@ -1025,18 +1541,37 @@
             <div id="MainPart_divExitLine" class="block queueElement">
               <p>
                 <a href="exit.html" id="MainPart_aExitLine">Leave the line</a>
-                <span id="MainPart_lbExitLineLoseYourPlaceText">(You will lose your place)</span>
+                <span id="MainPart_lbExitLineLoseYourPlaceText"
+                  >(You will lose your place)</span
+                >
               </p>
             </div>
           </div>
           <div id="middlepanel" data-bind="visible: layout.middlePanelVisible">
-            <iframe id="middlepanel_iframe" src="files/middle.html" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+            <iframe
+              id="middlepanel_iframe"
+              src="files/middle.html"
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
           </div>
           <div id="footer">
-            <div id="footer-disclaimer" data-bind="html: texts.disclaimerText"></div>
-            <div id="footer-direct-link" style="" data-bind="visible: hasQueueId">
+            <div
+              id="footer-disclaimer"
+              data-bind="html: texts.disclaimerText"
+            ></div>
+            <div
+              id="footer-direct-link"
+              style=""
+              data-bind="visible: hasQueueId"
+            >
               <span id="hlLinkToQueueTicket2Text">Queue ID:</span>
-              <a id="hlLinkToQueueTicket2" data-bind="text: queueId, click: toggleQueueIdLinkModal">00000000-0000-0000-0000-000000000001</a>
+              <a
+                id="hlLinkToQueueTicket2"
+                data-bind="text: queueId, click: toggleQueueIdLinkModal"
+                >00000000-0000-0000-0000-000000000001</a
+              >
             </div>
             <div id="footer-queueit-link">
               <strong class="by">
@@ -1049,8 +1584,16 @@
               </strong>
             </div>
           </div>
-          <div id="queueIdLinkModal" class="modal queueElement" data-bind="visible: queueIdLinkModalVisible()" style="display: none">
-            <div class="modal-background" data-bind="click: toggleQueueIdLinkModal"></div>
+          <div
+            id="queueIdLinkModal"
+            class="modal queueElement"
+            data-bind="visible: queueIdLinkModalVisible()"
+            style="display: none"
+          >
+            <div
+              class="modal-background"
+              data-bind="click: toggleQueueIdLinkModal"
+            ></div>
             <div id="queueIdLinkModal_Content" class="modal-content">
               <div id="queueIdModal_Header">
                 <span></span>
@@ -1063,7 +1606,11 @@
               </div>
               <div id="queueIdLinkModal_Body" class="modal-body">
                 <p>
-                  <input id="queueIdLinkURL" data-bind="value: initialWindowLocation()" readonly="" />
+                  <input
+                    id="queueIdLinkURL"
+                    data-bind="value: initialWindowLocation()"
+                    readonly=""
+                  />
                   <button
                     id="copyToClipboardButton"
                     data-bind="attr: { 'data-clipboard-target': '#queueIdLinkURL' }"
@@ -1086,15 +1633,33 @@
         <div id="MainPart_divVersionInfo" class="b" title="4.3.48.0"></div>
       </div>
       <div id="rightpanel" data-bind="visible: layout.rightPanelVisible">
-        <iframe id="rightpanel_iframe" src="files/right.html" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+        <iframe
+          id="rightpanel_iframe"
+          src="files/right.html"
+          allowtransparency="true"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
       </div>
     </div>
     <div id="sidebar" data-bind="visible: layout.sidePanelVisible">
-      <iframe id="sidebar_iframe" src="files/side.html" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+      <iframe
+        id="sidebar_iframe"
+        src="files/side.html"
+        allowtransparency="true"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
     </div>
 
     <div id="bottompanel" data-bind="visible: layout.bottomPanelVisible">
-      <iframe id="bottompanel_iframe" src="files/bottom.html" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+      <iframe
+        id="bottompanel_iframe"
+        src="files/bottom.html"
+        allowtransparency="true"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
     </div>
   </body>
 </html>
