@@ -104,11 +104,9 @@ queueViewModel.pageReady(function (data) {
     $(".plus-minus").click(function () {
       if ($(".progressbar-options").css("display") === "block") {
         $(".progressbar-options").hide(300);
-        $(".relevant-code").hide(300);
         $(".plus-minus").removeClass("minus");
       } else {
         $(".plus-minus").addClass("minus");
-        $(".relevant-code").show(300);
         $(".progressbar-options").show(300);
       }
     });
