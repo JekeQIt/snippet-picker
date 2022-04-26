@@ -97,6 +97,7 @@ queueViewModel.pageReady(function (data) {
     $(".relevant-code").hide();
     $(".relevant-btn").click(function () {
       $(".relevant-code").toggle();
+      $("div#relevant-css>code").hide();
     });
 
     // options functionality - hide other dropdowns if one is selected
@@ -105,9 +106,11 @@ queueViewModel.pageReady(function (data) {
     $(".plus-minus").click(function () {
       if ($(".progressbar-options").css("display") === "block") {
         $(".progressbar-options").hide();
+        $(".relevant-code").hide();
         $(".plus-minus").addClass("closed");
       } else {
         $(".progressbar-options").show();
+        $(".relevant-code").show();
         $(".plus-minus").removeClass("closed");
       }
     });
@@ -115,12 +118,22 @@ queueViewModel.pageReady(function (data) {
       $(`.progressbar`).hide();
       if (this.value === "all") {
         $(`.progressbar`).show();
+        $(".relevant-code").hide();
+      } else if (this.value === "radial-progressbar") {
+        $(`.progressbar.${this.value}`).show();
+        $("#relevant-html").show();
+        var htmlCode = $(`.progressbar.${this.value}`).prop("outerHTML");
+        $("#relevant-html>code").text(
+          `$("#MainPart_divProgressbar").hide();
+          $('${htmlCode}').appendTo(".warning-box");`
+        );
+        $(`code#${this.value}`).show();
       } else {
         // Select all elements except those with class="selected value":
         $(`.progressbar.${this.value}`).show();
-        console.log($(`.progressbar.${this.value}`));
-        var htmlCode = $(`.progressbar.${this.value}`).prop("outerHTML");
-        $("#relevant-html>code").text(htmlCode);
+        $("#relevant-html").hide();
+        $("div#relevant-css>code").hide();
+        $(`code#${this.value}`).show();
       }
     });
   }
