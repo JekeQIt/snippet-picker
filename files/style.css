@@ -103,6 +103,9 @@ body {
   padding-top: 4px;
 }
 /* Relevant Code */
+.relevant-wrapper {
+  display: none;
+}
 .relevant-code {
   background-color: #19be81;
   height: 310px;
@@ -111,13 +114,14 @@ body {
   border: 2px solid #000;
   position: relative;
   margin: 10px auto;
-  overflow: scroll;
+  overflow-y: scroll;
+  display: none;
 }
 .relevant-btn {
   margin: 5px 0;
   display: block;
 }
-#relevant-html {
+#relevant-js {
   background: #fff;
   margin-left: 3.5px;
   margin-right: 3.5px;
@@ -137,6 +141,14 @@ code {
   font-family: Consolas, "courier new";
   color: crimson;
   background-color: #f1f1f1;
+}
+.all {
+  background: #fff;
+  text-align: center;
+  margin: 5px;
+  border-radius: 3px;
+  padding: 5px;
+  font-weight: bold;
 }
 /*you can close this page without losing your place in line*/
 #main-top-message {

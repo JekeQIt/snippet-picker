@@ -91,10 +91,8 @@ queueViewModel.pageReady(function (data) {
     }
 
     // adding button to display relevant code
-    $(".relevant-code").hide();
     $(".relevant-btn").click(function () {
       $(".relevant-code").toggle();
-      $("div#relevant-css>code").hide();
     });
 
     // options functionality - hide other dropdowns if one is selected
@@ -112,24 +110,32 @@ queueViewModel.pageReady(function (data) {
     });
     $("select").on("change", function () {
       $(`.progressbar`).hide();
+      $("code").hide();
+      $(".relevant-wrapper").show();
       if (this.value === "all") {
         $(`.progressbar`).show();
-        $(".relevant-code").hide();
+        $("#relevant-css").hide();
+        $("#relevant-js").hide();
+        $(".all").show();
       } else if (this.value === "radial-progressbar") {
         $(`.progressbar.${this.value}`).show();
-        $("#relevant-html").show();
+        $("#relevant-js").show();
+        $("#relevant-css").show();
         var htmlCode = $(`.progressbar.${this.value}`).prop("outerHTML");
-        $("#relevant-html>code").text(
+        $("#relevant-js code").show();
+        $("#relevant-js code").text(
           `$("#MainPart_divProgressbar").hide();
           $('${htmlCode}').appendTo(".warning-box");`
         );
-        $(`code#${this.value}`).show();
+        $(`#${this.value}`).show();
+        $(".all").hide();
       } else {
         // Select all elements except those with class="selected value":
         $(`.progressbar.${this.value}`).show();
-        $("#relevant-html").hide();
-        $("div#relevant-css>code").hide();
-        $(`code#${this.value}`).show();
+        $("#relevant-js").hide();
+        $("#relevant-css").show();
+        $(`#${this.value}`).show();
+        $(".all").hide();
       }
     });
   }
