@@ -91,9 +91,6 @@ queueViewModel.pageReady(function (data) {
     }
 
     // adding button to display relevant code
-    $(
-      '<button type="button" class="relevant-btn">Relevant Code</button>'
-    ).appendTo(".progressbar-options");
     $(".relevant-code").hide();
     $(".relevant-btn").click(function () {
       $(".relevant-code").toggle();
@@ -103,15 +100,16 @@ queueViewModel.pageReady(function (data) {
     // options functionality - hide other dropdowns if one is selected
     // when option is selected display the progress bar that is selected
     // if this.value = 'specified progress bar' remove display: none style to that element
+
     $(".plus-minus").click(function () {
       if ($(".progressbar-options").css("display") === "block") {
-        $(".progressbar-options").hide();
-        $(".relevant-code").hide();
-        $(".plus-minus").addClass("closed");
+        $(".progressbar-options").hide(300);
+        $(".relevant-code").hide(300);
+        $(".plus-minus").removeClass("minus");
       } else {
-        $(".progressbar-options").show();
-        $(".relevant-code").show();
-        $(".plus-minus").removeClass("closed");
+        $(".plus-minus").addClass("minus");
+        $(".relevant-code").show(300);
+        $(".progressbar-options").show(300);
       }
     });
     $("select").on("change", function () {

@@ -1035,7 +1035,7 @@
               </div>
             </div>
             <div class="progressbar-options-container">
-              <span class="plus-minus"><span></span><span></span></span>
+              <span class="plus-minus minus"><span></span><span></span></span>
               <div class="progressbar-options">
                 <div class="progressbar-dropdown-container">
                   <label for="progressbar-dropdown"> </label>
@@ -1045,6 +1045,230 @@
                     </option>
                     <option value="all">All</option>
                   </select>
+                  <button type="button" class="relevant-btn">
+                    Relevant Code
+                  </button>
+                  <div class="relevant-code">
+                    <div id="relevant-html">
+                      JavaScript
+                      <br />
+                      <code></code>
+                    </div>
+                    <div id="relevant-css">
+                      CSS
+                      <br />
+                      <code id="standard">
+                        .progressbar { background: #fff; border: 2px solid #000;
+                        border-radius: 4px; margin: 5px auto; } <br />
+                        .progressbar .progress, .progressbar .progress.updated {
+                        background-color: var(--green-light-bold);
+                        background-image: none; background-image:
+                        linear-gradient( 90deg, rgba(255, 255, 255, 0) 13px,
+                        #000 13px ); background-size: 15px; border-radius: 2px;
+                        }
+                      </code>
+                      <code id="multi-colored">
+                        @-webkit-keyframes multi_colored { from {
+                        background-position: 0px; } to { background-position:
+                        40px; } } <br />
+                        @-moz-keyframes multi_colored { from {
+                        background-position: 0px; } to { background-position:
+                        40px; } }<br />
+                        @keyframes multi_colored { from { background-position:
+                        0px; } to { background-position: 40px; } }<br />
+                        .progressbar.multi-colored { background: rgba(0, 0, 0,
+                        0); border: 1px solid rgba(0, 0, 0, 0.5); }<br />
+                        .progressbar.multi-colored .progress { background-color:
+                        #fff; background-image: none; border-radius: 3px; }<br />
+
+                        .progressbar.multi-colored .progress.updated {
+                        background-color: #fff; background-image: none;
+                        -webkit-animation: multi_colored 1s linear infinite;
+                        -moz-animation: multi_colored 1s linear infinite;
+                        animation: multi_colored 1s linear infinite; }<br />
+                        .progressbar.multi-colored .progress,
+                        .progressbar.multi-colored .progress.updated {
+                        background-image: linear-gradient( 90deg,
+                        var(--green-light-bold) 10px, var(--green) 11px,
+                        var(--green) 20px, var(--green-light-light) 20px,
+                        var(--green-light-light) 29px, var(--green-light-medium)
+                        30px ); background-size: 40px; }
+                      </code>
+                      <code id="diagonal">
+                        @-webkit-keyframes diagonal { from {
+                        background-position: 0px; } to { background-position:
+                        50px; } }<br />
+                        @-moz-keyframes diagonal { from { background-position:
+                        0px; } to { background-position: 50px; } } <br />
+                        @keyframes diagonal { from { background-position: 0px; }
+                        to { background-position: 50px; } } <br />
+
+                        .progressbar.diagonal { background: #fff; border: 1px
+                        solid #000; border-radius: 15px; } <br />
+                        .progressbar.diagonal .progress, .progressbar.diagonal
+                        .progress.updated { background-color: black;
+                        background-image: linear-gradient( 130deg,
+                        var(--green-light-bold) 19px, var(--green-light-light)
+                        20px, var(--green-light-light) 38px,
+                        var(--green-light-bold) 39px ); background-size: 50px;
+                        border-radius: 15px; } <br />
+
+                        .progressbar.diagonal .progress.updated {
+                        -webkit-animation: diagonal 1s linear infinite;
+                        -moz-animation: diagonal 1s linear infinite; animation:
+                        diagonal 1s linear infinite; } <br />
+                        .progressbar.diagonal .progress .runner,
+                        .progressbar.diagonal .progress .runner.paused {
+                        display: none; }
+                      </code>
+                      <code id="burst">
+                        @-webkit-keyframes burst { 0% { background-position: 50%
+                        50%, 0; } 100% { background-position: -100% 50%, 0; } }
+                        <br />
+                        @-moz-keyframes burst { 0% { background-position: 50%
+                        50%, 0; } 100% { background-position: -100% 50%, 0; } }
+                        <br />
+                        @keyframes burst { 0% { background-position: 50% 50%, 0;
+                        } 100% { background-position: -100% 50%, 0; } } <br />
+                        .progressbar.burst { border: 1px solid #000; } <br />
+                        .progressbar.burst .progress, .progressbar.burst
+                        .progress.updated { background-color:
+                        var(--green-light-bold); background-image: none;
+                        background-size: 200% 100%; background-image:
+                        linear-gradient( 90deg, var(--green-light-bold) 0%,
+                        var(--green-light-bold) 100% ); } <br />
+
+                        .progressbar.burst .progress.updated { background-image:
+                        linear-gradient( 90deg, var(--green-light-bold) 0%,
+                        rgba(255, 255, 255, 0.842) 20%, var(--green-light-bold)
+                        22% ); -webkit-animation: burst 2s ease-out 3 forwards;
+                        -moz-animation: burst 2s ease-out 3 forwards; animation:
+                        burst 2s ease-out 3 forwards; } <br />
+                        .progressbar.burst .progress .runner, .progressbar.burst
+                        .progress .runner.paused { background-repeat: no-repeat;
+                        display: none; }
+                      </code>
+                      <code id="bracket">
+                        @-webkit-keyframes bracket { from { background-position:
+                        0px bottom, 0px top, 0, 0; } to { background-position:
+                        50px bottom, 50px top, 0, 0; } } <br />
+
+                        @-moz-keyframes bracket { from { background-position:
+                        0px bottom, 0px top, 0, 0; } to { background-position:
+                        50px bottom, 50px top, 0, 0; } } <br />
+
+                        @keyframes bracket { from { background-position: 0px
+                        bottom, 0px top, 0, 0; } to { background-position: 50px
+                        bottom, 50px top, 0, 0; } } <br />
+
+                        /* progressbar ppp */ .progressbar.bracket { background:
+                        rgba(0, 0, 0, 0); border: 1px solid rgba(0, 0, 0, 0.5);
+                        border-radius: 4.4px; } <br />
+
+                        .progressbar.bracket .progress, .progressbar.bracket
+                        .progress.updated { background-color: rgba(0, 0, 0, 0);
+                        background-image: linear-gradient( 126deg, rgba(0, 0, 0,
+                        0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px ),
+                        linear-gradient( 55deg, rgba(0, 0, 0, 0) 19px, #000
+                        20px, rgba(0, 0, 0, 0) 21px ), linear-gradient( 90deg,
+                        var(--green), var(--green-light-bold),
+                        var(--green-light-light), var(--green-light-medium) );
+                        background-size: 50px 50%, 50px 50%, cover, 100% 100%;
+                        background-position: 50px bottom, 50px top, 0, 0;
+                        background-repeat: repeat-x, repeat-x, no-repeat,
+                        no-repeat; border-radius: 3px; } <br />
+
+                        .progressbar.bracket .progress.updated {
+                        -webkit-animation: bracket 1s linear infinite
+                        !important; -moz-animation: bracket 1s linear infinite
+                        !important; animation: bracket 1s linear infinite
+                        !important; } <br />
+
+                        .progressbar.bracket .progress .runner,
+                        .progressbar.bracket .progress .runner.paused {
+                        background-repeat: repeat-x, repeat-x, no-repeat;
+                        display: none; }
+                      </code>
+                      <code id="radial-progressbar">
+                        .radial-progressbar-background { background-image:
+                        url(./WatchSVG.svg); background-size: contain;
+                        background-position: center; background-repeat:
+                        no-repeat; height: 207px; /*@circle-size */ width:
+                        155px; /*@circle-size */ margin: 0px auto; /*
+                        margin-bottom: -186px; */ position: absolute; z-index:
+                        99; top: -26px; display: none; } <br />
+                        .progressbar.radial-progressbar { height: 150px;
+                        /*@circle-size */ width: 150px; /*@circle-size */
+                        margin: 15px auto; border-radius: 50%; border: none; }
+                        <br />
+
+                        .circle .mask, .circle .fill, .circle .shadow { height:
+                        150px; /*@circle-size */ width: 150px; /*@circle-size */
+                        border-radius: 50%; position: absolute; } <br />
+                        .circle .shadow { box-shadow: 0px 0 40px 0px inset
+                        rgba(0, 0, 0, 1); } <br />
+                        .circle .mask, .circle .fill {
+                        -webkit-backface-visibility: hidden; transition:
+                        -webkit-transform 1s; transition: -ms-transform 1s;
+                        transition: transform 1s; border-radius: 50%; }
+                        <br />
+                        .circle .mask { clip: rect( 0px, 150px, 150px, 75px );
+                        /*clip: rect(0px, @circle-size, @circle-size,
+                        @circle-size/2); */ } <br />
+                        .circle .mask .fill { clip: rect( 0px, 75px, 150px, 0px
+                        ); /*clip: rect(0px, @circle-size/2, @circle-size,
+                        0px);*/ background-color: var(--green); } <br />
+
+                        .circle-inset { background-color: rgba(255, 255, 255,
+                        0.4); width: 150px; height: 150px; position: relative;
+                        border-radius: 50%; box-shadow: inset 0px 0px 20px 0px
+                        rgba(49, 46, 46, 0.61); /* border: 1px solid rgba(136,
+                        136, 136, 0.58); */ } <br />
+                        .circle-inset .runner { width: 80px; height: 80px;
+                        position: relative; top: 8px; left: 9px;
+                        background-image: url(player_w_right_walk1-0.2.gif);
+                        background-size: 80%; background-position: 5px center;
+                        background-repeat: no-repeat; }
+                        <br />
+
+                        .circle-inset .runner.paused { left: 33px;
+                        background-image: url(./person_pause_w.png);
+                        background-size: 80%; background-position: 7px center;
+                        background-repeat: no-repeat; }
+                        <br />
+                        .circle-inset .contents { /*for percentage display */ /*
+                        display: none; */ position: absolute; top: 40px; left:
+                        30px; line-height: 1; text-align: center; color: #000;
+                        font-weight: 800; } <br />
+
+                        .circle .mask.full, .circle .fill { -webkit-transform:
+                        rotate(0deg); -ms-transform: rotate(0deg); transform:
+                        rotate(0deg); } <br />
+                        .circle .fill.fix { -webkit-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg); transform: rotate(0deg); }
+                      </code>
+                      <code id="shoe">
+                        .progressbar.shoe { background: rgba(0, 0, 0, 0);
+                        border: none; height: 200px; background-image:
+                        url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeStroke.png");
+                        background-repeat: no-repeat; background-size: auto
+                        200px; background-position: 10px; }<br />
+
+                        .progressbar.shoe .progress, .progressbar.shoe
+                        .progress.updated { background-color: rgba(0, 0, 0, 0);
+                        background-image:
+                        url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeImg2.png");
+                        background-repeat: no-repeat; background-size: auto
+                        200px; background-position: 10px; }<br />
+
+                        .progressbar.shoe .progress.updated { animation: none;
+                        }<br />
+
+                        .progressbar.shoe .progress .runner, .progressbar.shoe
+                        .progress .runner.paused { background-image: none; }
+                      </code>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1407,198 +1631,6 @@
           </div>
         </div>
         <div id="MainPart_divVersionInfo" class="b" title="4.3.48.0"></div>
-        <div class="relevant-code">
-          <div id="relevant-html">
-            JavaScript
-            <br />
-            <code></code>
-          </div>
-          <div id="relevant-css">
-            CSS
-            <br />
-            <code id="standard">
-              .progressbar { background: #fff; border: 2px solid #000;
-              border-radius: 4px; margin: 5px auto; } <br />
-              .progressbar .progress, .progressbar .progress.updated {
-              background-color: var(--green-light-bold); background-image: none;
-              background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0)
-              13px, #000 13px ); background-size: 15px; border-radius: 2px; }
-            </code>
-            <code id="multi-colored">
-              @-webkit-keyframes multi_colored { from { background-position:
-              0px; } to { background-position: 40px; } } <br />
-              @-moz-keyframes multi_colored { from { background-position: 0px; }
-              to { background-position: 40px; } }<br />
-              @keyframes multi_colored { from { background-position: 0px; } to {
-              background-position: 40px; } }<br />
-              .progressbar.multi-colored { background: rgba(0, 0, 0, 0); border:
-              1px solid rgba(0, 0, 0, 0.5); }<br />
-              .progressbar.multi-colored .progress { background-color: #fff;
-              background-image: none; border-radius: 3px; }<br />
-
-              .progressbar.multi-colored .progress.updated { background-color:
-              #fff; background-image: none; -webkit-animation: multi_colored 1s
-              linear infinite; -moz-animation: multi_colored 1s linear infinite;
-              animation: multi_colored 1s linear infinite; }<br />
-              .progressbar.multi-colored .progress, .progressbar.multi-colored
-              .progress.updated { background-image: linear-gradient( 90deg,
-              var(--green-light-bold) 10px, var(--green) 11px, var(--green)
-              20px, var(--green-light-light) 20px, var(--green-light-light)
-              29px, var(--green-light-medium) 30px ); background-size: 40px; }
-            </code>
-            <code id="diagonal">
-              @-webkit-keyframes diagonal { from { background-position: 0px; }
-              to { background-position: 50px; } }<br />
-              @-moz-keyframes diagonal { from { background-position: 0px; } to {
-              background-position: 50px; } } <br />
-              @keyframes diagonal { from { background-position: 0px; } to {
-              background-position: 50px; } } <br />
-
-              .progressbar.diagonal { background: #fff; border: 1px solid #000;
-              border-radius: 15px; } <br />
-              .progressbar.diagonal .progress, .progressbar.diagonal
-              .progress.updated { background-color: black; background-image:
-              linear-gradient( 130deg, var(--green-light-bold) 19px,
-              var(--green-light-light) 20px, var(--green-light-light) 38px,
-              var(--green-light-bold) 39px ); background-size: 50px;
-              border-radius: 15px; } <br />
-
-              .progressbar.diagonal .progress.updated { -webkit-animation:
-              diagonal 1s linear infinite; -moz-animation: diagonal 1s linear
-              infinite; animation: diagonal 1s linear infinite; } <br />
-              .progressbar.diagonal .progress .runner, .progressbar.diagonal
-              .progress .runner.paused { display: none; }
-            </code>
-            <code id="burst">
-              @-webkit-keyframes burst { 0% { background-position: 50% 50%, 0; }
-              100% { background-position: -100% 50%, 0; } } <br />
-              @-moz-keyframes burst { 0% { background-position: 50% 50%, 0; }
-              100% { background-position: -100% 50%, 0; } } <br />
-              @keyframes burst { 0% { background-position: 50% 50%, 0; } 100% {
-              background-position: -100% 50%, 0; } } <br />
-              .progressbar.burst { border: 1px solid #000; } <br />
-              .progressbar.burst .progress, .progressbar.burst .progress.updated
-              { background-color: var(--green-light-bold); background-image:
-              none; background-size: 200% 100%; background-image:
-              linear-gradient( 90deg, var(--green-light-bold) 0%,
-              var(--green-light-bold) 100% ); } <br />
-
-              .progressbar.burst .progress.updated { background-image:
-              linear-gradient( 90deg, var(--green-light-bold) 0%, rgba(255, 255,
-              255, 0.842) 20%, var(--green-light-bold) 22% ); -webkit-animation:
-              burst 2s ease-out 3 forwards; -moz-animation: burst 2s ease-out 3
-              forwards; animation: burst 2s ease-out 3 forwards; } <br />
-              .progressbar.burst .progress .runner, .progressbar.burst .progress
-              .runner.paused { background-repeat: no-repeat; display: none; }
-            </code>
-            <code id="bracket">
-              @-webkit-keyframes bracket { from { background-position: 0px
-              bottom, 0px top, 0, 0; } to { background-position: 50px bottom,
-              50px top, 0, 0; } } <br />
-
-              @-moz-keyframes bracket { from { background-position: 0px bottom,
-              0px top, 0, 0; } to { background-position: 50px bottom, 50px top,
-              0, 0; } } <br />
-
-              @keyframes bracket { from { background-position: 0px bottom, 0px
-              top, 0, 0; } to { background-position: 50px bottom, 50px top, 0,
-              0; } } <br />
-
-              /* progressbar ppp */ .progressbar.bracket { background: rgba(0,
-              0, 0, 0); border: 1px solid rgba(0, 0, 0, 0.5); border-radius:
-              4.4px; } <br />
-
-              .progressbar.bracket .progress, .progressbar.bracket
-              .progress.updated { background-color: rgba(0, 0, 0, 0);
-              background-image: linear-gradient( 126deg, rgba(0, 0, 0, 0) 19px,
-              #000 20px, rgba(0, 0, 0, 0) 21px ), linear-gradient( 55deg,
-              rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px ),
-              linear-gradient( 90deg, var(--green), var(--green-light-bold),
-              var(--green-light-light), var(--green-light-medium) );
-              background-size: 50px 50%, 50px 50%, cover, 100% 100%;
-              background-position: 50px bottom, 50px top, 0, 0;
-              background-repeat: repeat-x, repeat-x, no-repeat, no-repeat;
-              border-radius: 3px; } <br />
-
-              .progressbar.bracket .progress.updated { -webkit-animation:
-              bracket 1s linear infinite !important; -moz-animation: bracket 1s
-              linear infinite !important; animation: bracket 1s linear infinite
-              !important; } <br />
-
-              .progressbar.bracket .progress .runner, .progressbar.bracket
-              .progress .runner.paused { background-repeat: repeat-x, repeat-x,
-              no-repeat; display: none; }
-            </code>
-            <code id="radial-progressbar">
-              .radial-progressbar-background { background-image:
-              url(./WatchSVG.svg); background-size: contain;
-              background-position: center; background-repeat: no-repeat; height:
-              207px; /*@circle-size */ width: 155px; /*@circle-size */ margin:
-              0px auto; /* margin-bottom: -186px; */ position: absolute;
-              z-index: 99; top: -26px; display: none; } <br />
-              .progressbar.radial-progressbar { height: 150px; /*@circle-size */
-              width: 150px; /*@circle-size */ margin: 15px auto; border-radius:
-              50%; border: none; } <br />
-
-              .circle .mask, .circle .fill, .circle .shadow { height: 150px;
-              /*@circle-size */ width: 150px; /*@circle-size */ border-radius:
-              50%; position: absolute; } <br />
-              .circle .shadow { box-shadow: 0px 0 40px 0px inset rgba(0, 0, 0,
-              1); } <br />
-              .circle .mask, .circle .fill { -webkit-backface-visibility:
-              hidden; transition: -webkit-transform 1s; transition:
-              -ms-transform 1s; transition: transform 1s; border-radius: 50%; }
-              <br />
-              .circle .mask { clip: rect( 0px, 150px, 150px, 75px ); /*clip:
-              rect(0px, @circle-size, @circle-size, @circle-size/2); */ } <br />
-              .circle .mask .fill { clip: rect( 0px, 75px, 150px, 0px ); /*clip:
-              rect(0px, @circle-size/2, @circle-size, 0px);*/ background-color:
-              var(--green); } <br />
-
-              .circle-inset { background-color: rgba(255, 255, 255, 0.4); width:
-              150px; height: 150px; position: relative; border-radius: 50%;
-              box-shadow: inset 0px 0px 20px 0px rgba(49, 46, 46, 0.61); /*
-              border: 1px solid rgba(136, 136, 136, 0.58); */ } <br />
-              .circle-inset .runner { width: 80px; height: 80px; position:
-              relative; top: 8px; left: 9px; background-image:
-              url(player_w_right_walk1-0.2.gif); background-size: 80%;
-              background-position: 5px center; background-repeat: no-repeat; }
-              <br />
-
-              .circle-inset .runner.paused { left: 33px; background-image:
-              url(./person_pause_w.png); background-size: 80%;
-              background-position: 7px center; background-repeat: no-repeat; }
-              <br />
-              .circle-inset .contents { /*for percentage display */ /* display:
-              none; */ position: absolute; top: 40px; left: 30px; line-height:
-              1; text-align: center; color: #000; font-weight: 800; } <br />
-
-              .circle .mask.full, .circle .fill { -webkit-transform:
-              rotate(0deg); -ms-transform: rotate(0deg); transform:
-              rotate(0deg); } <br />
-              .circle .fill.fix { -webkit-transform: rotate(0deg);
-              -ms-transform: rotate(0deg); transform: rotate(0deg); }
-            </code>
-            <code id="shoe">
-              .progressbar.shoe { background: rgba(0, 0, 0, 0); border: none;
-              height: 200px; background-image:
-              url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeStroke.png");
-              background-repeat: no-repeat; background-size: auto 200px;
-              background-position: 10px; }<br />
-
-              .progressbar.shoe .progress, .progressbar.shoe .progress.updated {
-              background-color: rgba(0, 0, 0, 0); background-image:
-              url("https://queueit-company.s3.amazonaws.com/queuejeff/userdata/0LayoutSnippets/Progressbars/ShoeProgressbar/v01/ShoeImg2.png");
-              background-repeat: no-repeat; background-size: auto 200px;
-              background-position: 10px; }<br />
-
-              .progressbar.shoe .progress.updated { animation: none; }<br />
-
-              .progressbar.shoe .progress .runner, .progressbar.shoe .progress
-              .runner.paused { background-image: none; }
-            </code>
-          </div>
-        </div>
       </div>
       <div id="rightpanel" data-bind="visible: layout.rightPanelVisible">
         <iframe
