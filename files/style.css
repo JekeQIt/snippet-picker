@@ -157,33 +157,102 @@ a {
   99% {
     box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
   }
-  100%{
-    box-shadow: none
+  100% {
+    box-shadow: none;
   }
 }
-.progressbar-dropdown-container{
-
+.progressbar-options-container {
+  position: relative;
+  min-height: 12px;
+  transition: all linear 0.3s;
 }
-.progressbar-dropdown-container  select{
-  height: 15px;
-  width: 10px;
-  font-size: 10px;
-  transition: .5s all;
+.progessbar-options {
+}
+.plus-minus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 12px;
+  width: 16px;
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 3px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all linear 0.3s;
+  animation: select_ripple 0.8s linear 3;
+  border-radius: 3px;
+}
+.plus-minus:hover {
+  background-color: #eee;
+}
+.plus-minus span {
+  position: absolute;
+  transition: 300ms;
+  background: #000;
+  border-radius: 2px;
+}
+.plus-minus span:first-child {
+  top: 2.5px;
+  bottom: 2px;
+  width: 2px;
+  left: 45%;
+}
+
+.plus-minus span:last-child {
+  left: 3px;
+  right: 3px;
+  height: 2px;
+  top: 45%;
+}
+/* Morph the shape when the button is hovered over */
+.plus-minus.minus span {
+  transform: rotate(90deg);
+}
+
+.plus-minus.minus span:last-child {
+  left: 50%;
+  right: 50%;
+}
+.plus-minus.minus {
+  top: 8px;
+  left: calc(100% - 40px);
+  transition: all linear 0.3s;
+}
+/* .plus-minus:hover{
+  background-color: #eee;
+} */
+.progressbar-options {
+  padding: 15px 10px;
+  max-width: 514px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 1px 1px 12px rgb(0 0 0 / 50%);
+}
+.progressbar-dropdown-container {
+}
+.progressbar-dropdown-container select {
+  height: 25px;
+  font-size: 16px;
+  transition: 0.5s all;
   background-color: var(--gray-lightest);
-  animation: select_ripple .8s linear 3;
-  border:none;
+  border: none;
   box-shadow: 0 0 6px 1px rgb(0 0 0 / 28%);
+  margin: 0 0 5px;
 }
 .progressbar-dropdown-container:hover select,
 .progressbar-dropdown-container select:active,
-.progressbar-dropdown-container select:focus-visible  {
-height: 25px;
+.progressbar-dropdown-container select:focus-visible {
+  /* height: 25px;
 font-size: 16px;
 width: 100%;
 transition: .3s all;
-background-color: #fff;
+background-color: #fff; */
 }
-.progressbar-dropdown-container select:focus-visible {outline: none;}
+.progressbar-dropdown-container select:focus-visible {
+  outline: none;
+}
 /* progressbar ppp  */
 
 @-webkit-keyframes gradient_bkgd {
@@ -417,7 +486,6 @@ background-color: #fff;
   border: none;
 }
 
-
 .circle .mask,
 .circle .fill,
 .circle .shadow {
@@ -567,7 +635,8 @@ background-color: #fff;
 .progressbar.bracket .progress.updated {
   background-color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(126deg, rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px),
-    linear-gradient(55deg, rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px), linear-gradient(90deg, var(--green), var(--green-light-bold), var(--green-light-light), var(--green-light-medium));
+    linear-gradient(55deg, rgba(0, 0, 0, 0) 19px, #000 20px, rgba(0, 0, 0, 0) 21px),
+    linear-gradient(90deg, var(--green), var(--green-light-bold), var(--green-light-light), var(--green-light-medium));
   background-size: 50px 50%, 50px 50%, cover, 100% 100%;
   background-position: 50px bottom, 50px top, 0, 0;
   background-repeat: repeat-x, repeat-x, no-repeat, no-repeat;

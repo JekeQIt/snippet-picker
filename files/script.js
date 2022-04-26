@@ -70,17 +70,9 @@ queueViewModel.pageReady(function (data) {
           </div>
           <div class="clear"></div>
         </div>`).insertAfter(`.burst`);
-    //progress bar drowpdown
-    $(
-      '<div class="progressbar-dropdown-container">' +
-        '<label for="progressbar-dropdown"> </label>' +
-        '<select name="progressbar-dropdown" id="progressbarDropdown">' +
-        '<option value="" disabled selected>Select Progress Bar</option>' +
-        '<option value="all">All</option>' +
-        "</select>" +
-        "</div>"
-    ).insertAfter("#divConfirmRedirectModal");
 
+    // progress bar display loop
+    // display STANDARD to begin with, add display none style to all divs but standard
     var progressBarDiv = $(".progressbar");
     for (let i = 0; i < progressBarDiv.length; i++) {
       progressBarName = progressBarDiv[i].classList[2];
@@ -88,9 +80,6 @@ queueViewModel.pageReady(function (data) {
       $(`<option value="${progressBarName}">${progressBarName[0].toUpperCase() + progressBarName.substring(1)}</option>`).appendTo("#progressbarDropdown");
     }
 
-    // progress bar display loop
-    // display STANDARD to begin with, add display none style to all divs but standard
-    //
     for (let i = 1; i < progressBarDiv.length; i++) {
       progressBarDiv[i].style.display = "none";
     }
@@ -99,6 +88,15 @@ queueViewModel.pageReady(function (data) {
     // when option is selected display the progress bar that is selected
     // if this.value = 'specified progress bar' remove display: none style to that element
 
+    $(".plus-minus").click(function () {
+      if ($(".progressbar-options").css("display") === "block") {
+        $(".progressbar-options").hide(300);
+        $(".plus-minus").removeClass("minus");
+      } else {
+        $(".plus-minus").addClass("minus");
+        $(".progressbar-options").show(300);
+      }
+    });
     $("select").on("change", function () {
       $(`.progressbar`).hide();
       if (this.value === "all") {
@@ -130,6 +128,9 @@ queueViewModel.pageReady(function (data) {
 //queueViewModel.modelUpdated(function (data) {
 //});
 
-// $(document).ready(function(){
-//   $('#MainPart_ulProgressbarBox_Holder_Processbar').removeAttr('style')
-// })
+//comes after pageReady
+$(document).ready(function () {
+  // $('#MainPart_ulProgressbarBox_Holder_Processbar').removeAttr('style')
+  $(".width-slider").appendTo(".progressbar-options");
+  $(".checkbox").appendTo(".progressbar-options");
+});
