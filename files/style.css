@@ -109,8 +109,8 @@ body {
 .relevant-code {
   height: 310px;
   width: auto;
-  border-radius: 6px;
-  border: 2px solid #000;
+  border-radius: 3px;
+  border: 1px solid var(--gray-medium);
   position: relative;
   margin: 10px auto;
   overflow-y: scroll;
@@ -118,7 +118,14 @@ body {
 }
 .relevant-btn {
   margin: 5px 0;
+  padding: 0 10px;
   display: block;
+  background-color: var(--gray-lightest);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 6px 1px rgb(0 0 0 / 28%);
+  height: 25px;
+  font-size: 16px;
 }
 #relevant-js,
 #relevant-css {

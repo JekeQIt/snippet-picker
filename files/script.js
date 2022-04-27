@@ -93,6 +93,13 @@ queueViewModel.pageReady(function (data) {
     // adding button to display relevant code
     $(".relevant-btn").click(function () {
       $(".relevant-code").toggle();
+      if ($("i").hasClass("fa-chevron-down")) {
+        $("i").removeClass("fa-chevron-down");
+        $("i").addClass("fa-chevron-up");
+      } else {
+        $("i").removeClass("fa-chevron-up");
+        $("i").addClass("fa-chevron-down");
+      }
     });
 
     // options functionality - hide other dropdowns if one is selected
