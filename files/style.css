@@ -107,7 +107,6 @@ body {
   display: none;
 }
 .relevant-code {
-  background-color: #19be81;
   height: 310px;
   width: auto;
   border-radius: 6px;
@@ -121,21 +120,13 @@ body {
   margin: 5px 0;
   display: block;
 }
-#relevant-js {
-  background: #fff;
-  margin-left: 3.5px;
-  margin-right: 3.5px;
-  margin-top: 3.5px;
-  border-radius: 3px;
-  font-weight: bold;
-}
+#relevant-js,
 #relevant-css {
   background: #fff;
-  margin-right: 3.5px;
-  margin-left: 3.5px;
-  margin-top: 3.5px;
+  margin: 3px;
   border-radius: 3px;
   font-weight: bold;
+  padding: 10px;
 }
 code {
   font-family: Consolas, "courier new";
