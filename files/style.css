@@ -118,7 +118,7 @@ body {
 }
 .relevant-btn {
   margin: 5px 0;
-  padding: 0 10px;
+  padding: 0 10px 0 20px;
   display: block;
   background-color: var(--gray-lightest);
   border: none;
@@ -126,6 +126,9 @@ body {
   box-shadow: 0 0 6px 1px rgb(0 0 0 / 28%);
   height: 25px;
   font-size: 16px;
+}
+.relevant-btn i {
+  padding-left: 10px;
 }
 #relevant-js,
 #relevant-css {
@@ -286,6 +289,30 @@ a {
   border: none;
   box-shadow: 0 0 6px 1px rgb(0 0 0 / 28%);
   margin: 0 0 5px;
+  -webkit-padding-end: 40px;
+}
+.progressbar-dropdown-container label {
+  position: relative;
+}
+.progressbar-dropdown-container label:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  color: #000;
+  right: 4px;
+  top: -1px;
+  position: absolute;
+  pointer-events: none;
+}
+.progressbar-dropdown-container label:before {
+  content: "";
+  right: 4px;
+  top: 0px;
+  width: 23px;
+  height: 18px;
+  position: absolute;
+  pointer-events: none;
+  display: block;
 }
 .progressbar-dropdown-container:hover select,
 .progressbar-dropdown-container select:active,
