@@ -1014,6 +1014,29 @@ body.exit .btn {
 #MainPart_divExitLine {
   display: none;
 }
+#logoUploadContainer {
+  display: absolute;
+  margin-top: 12px;
+  border: 1px solid #8a8b8f;
+  padding: 9px;
+}
+#logoUploadLabel {
+  background-color: #fff;
+  max-width: 100px;
+  margin-bottom: 2px;
+  padding: 0 13px;
+  position: relative;
+  top: -20px;
+}
+#logoUpload {
+  margin-top: 12px;
+  border: 1px solid #fff;
+  padding: 9px;
+  overflow: visible;
+  display: block;
+  width: 230px;
+  margin-top: -20px;
+}
 @media screen and (max-width: 540px) {
   .reminder-form .item-input,
   .btn {

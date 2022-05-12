@@ -1,5 +1,8 @@
 $(document).ready(function () {
-  if (queueViewModel.eventId === "preview-layout" || queueViewModel.eventId === "testevent") {
+  if (
+    queueViewModel.eventId === "preview-layout" ||
+    queueViewModel.eventId === "testevent"
+  ) {
     console.log("preview");
     var pageid = $("body").attr("data-pageid");
 
@@ -48,6 +51,10 @@ $(document).ready(function () {
       });
       //do something when paused button clicked.
       // $("#PreviewStatesContent label:nth-child(4) input").change(function () {});
+      $(`<div id="logoUploadContainer">
+      <label id="logoUploadLabel">Upload Logo</label>
+      <input type="file" name="logo" id="logoUpload">
+      </div>`).insertAfter("#reminderStatusMesage");
     }
   }
 });

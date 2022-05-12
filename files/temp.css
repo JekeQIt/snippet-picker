@@ -36,11 +36,11 @@
 /* hide iframes - end */
 
 .logo {
-  display: none;
+  /* display: none; */
 }
 
 .logo img {
-  content: url(logo.png);
+  content: url(default_images/queue-it_logo.png);
 }
 
 .reminder-form {
