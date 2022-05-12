@@ -7,6 +7,9 @@ queueViewModel.pageReady(function (data) {
   }
 
   if (pageid == "queue") {
+    $(
+      '<div id="MainPart_divProgressbar_Progress_Runner" class="runner" data-bind="css: { paused: layout.queueIsPausedVisible }"></div>'
+    ).appendTo("#MainPart_divProgressbar_Progress");
     $(`<div class="progressbar queueElement multi-colored" data-bind="visible: layout.progressVisible">
           <div class="progress updated" style="width: 75%">
             <div  class="runner" data-bind="css: { paused: layout.queueIsPausedVisible }"></div>
