@@ -72,6 +72,45 @@ $(document).ready(function () {
         var logoUrl = document.querySelector("#logoUrl");
         $(".logo>img").attr("src", `${logoUrl.value}`);
       });
+
+      //upload background via image
+      const backgroundUpload = document.querySelector("#backgroundUpload");
+      var uploadedBgImage = "";
+
+      backgroundUpload.addEventListener("change", function () {
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+          uploadedBgImage = reader.result;
+          console.log(uploadedBgImage);
+          $(".queue").css(
+            "background",
+            `url(${uploadedBgImage}) center/ cover no-repeat fixed`
+          );
+        });
+        reader.readAsDataURL(this.files[0]);
+      });
+
+      //upload background via url
+      const backgroundUploadButton = document.querySelector(
+        "#backgroundUrlButton"
+      );
+
+      backgroundUploadButton.addEventListener("click", function () {
+        var backgroundUrl = document.querySelector("#backgroundUrl");
+        $(".queue").css(
+          "background",
+          `url(${backgroundUrl.value}) center / cover no-repeat fixed`
+        );
+      });
+
+      //change background color
+      var backgroundColorPicker = document.querySelector(
+        "#backgroundColorPicker"
+      );
+
+      backgroundColorPicker.addEventListener("change", function () {
+        $(".queue").css("background", `${backgroundColorPicker.value}`);
+      });
     }
   }
 });

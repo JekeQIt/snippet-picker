@@ -898,6 +898,24 @@
             <input id="logoUrlButton" type="button" value="Upload" />
           </div>
         </div>
+        <div id="backgroundUploadContainer">
+          <label id="backgroundUploadLabel">Upload Background</label>
+          <input
+            type="file"
+            accept="image/*"
+            name="background"
+            id="backgroundUpload"
+          />
+          <div id="backgroundUrlUploadContainer">
+            <label id="backgroundUrlLabel">URL for Background</label>
+            <input type="text" name="background-url" id="backgroundUrl" />
+            <input id="backgroundUrlButton" type="button" value="Upload" />
+          </div>
+          <div id="backgroundColorContainer">
+            <input type="color" name="bgColor" id="backgroundColorPicker" />
+            <label for="bgColor">Background Color</label>
+          </div>
+        </div>
       </div>
     </div>
     <div id="toppanel" data-bind="visible: layout.topPanelVisible">
