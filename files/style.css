@@ -164,6 +164,9 @@ code {
 .logo {
   font-size: 0;
 }
+#imgCustomerLogo {
+  max-height: 100px;
+}
 #header {
   padding: 0px;
   font-weight: 400;
@@ -1036,6 +1039,40 @@ body.exit .btn {
   display: block;
   width: 230px;
   margin-top: -20px;
+}
+#logoUrlUploadContainer {
+  display: absolute;
+  margin-top: 12px;
+  border: 1px solid #8a8b8f;
+  padding: 9px;
+  height: 45px;
+}
+#logoUrlLabel {
+  background-color: #fff;
+  max-width: 100px;
+  padding: 0 13px;
+  position: relative;
+  top: -20px;
+  left: 10px;
+}
+#logoUrl {
+  margin-top: 12px;
+  border: 1px solid #000;
+  padding: 9px;
+  overflow: visible;
+  display: block;
+  width: 210px;
+  margin-top: -10px;
+}
+#logoUrl:focus {
+  border: 1px solid #000;
+  border-radius: 0;
+}
+#logoUrlButton {
+  position: relative;
+  top: -39px;
+  left: 157px;
+  padding: 9px 12px;
 }
 @media screen and (max-width: 540px) {
   .reminder-form .item-input,

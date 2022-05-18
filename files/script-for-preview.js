@@ -51,10 +51,27 @@ $(document).ready(function () {
       });
       //do something when paused button clicked.
       // $("#PreviewStatesContent label:nth-child(4) input").change(function () {});
-      $(`<div id="logoUploadContainer">
-      <label id="logoUploadLabel">Upload Logo</label>
-      <input type="file" name="logo" id="logoUpload">
-      </div>`).insertAfter("#reminderStatusMesage");
+
+      //upload logo via image
+      const logoUpload = document.querySelector("#logoUpload");
+      var uploadedImage = "";
+
+      logoUpload.addEventListener("change", function () {
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+          uploadedImage = reader.result;
+          $(".logo>img").attr("src", `${uploadedImage}`);
+        });
+        reader.readAsDataURL(this.files[0]);
+      });
+
+      //upload logo via url
+      const logoUploadButton = document.querySelector("#logoUrlButton");
+
+      logoUploadButton.addEventListener("click", function () {
+        var logoUrl = document.querySelector("#logoUrl");
+        $(".logo>img").attr("src", `${logoUrl.value}`);
+      });
     }
   }
 });
